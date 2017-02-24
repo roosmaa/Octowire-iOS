@@ -1,0 +1,11 @@
+language: objective-c
+osx_image: xcode8.2
+cache:
+  - bundler
+  - cocoapods
+
+before_install:
+  - bundle install
+
+script:
+  - bundle exec fastlane ios test
