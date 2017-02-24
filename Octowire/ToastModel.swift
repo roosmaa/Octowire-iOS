@@ -7,3 +7,35 @@
 //
 
 import Foundation
+
+enum ToastType {
+    case Error
+    case Info
+}
+
+/// ToastModel represents a temporary error/info message
+struct ToastModel {
+    let id: UUID
+    let type: ToastType
+    let message: String
+    
+    init(type: ToastType, message: String) {
+        self.id = UUID()
+        self.type = type
+        self.message = message
+    }
+    
+    init(id: UUID, type: ToastType, message: String) {
+        self.id = id
+        self.type = type
+        self.message = message
+    }
+}
+
+extension ToastModel: Equatable {
+    static func ==(lhs: ToastModel, rhs: ToastModel) -> Bool {
+        return lhs.id == rhs.id
+            && lhs.type == rhs.type
+            && lhs.message == rhs.message
+    }
+}

@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		302101A27C81453F8DD1AE1F /* Pods_Octowire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BF6D2D02B5AE043238280E /* Pods_Octowire.framework */; };
 		A326AEF8911C6D174C1F2525 /* Pods_OctowireUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA03CC8771A538D39D41B56 /* Pods_OctowireUITests.framework */; };
+		C120F3B61E6093B00025FC38 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3B51E6093B00025FC38 /* AppState.swift */; };
+		C120F3BB1E6098190025FC38 /* ToastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3BA1E6098190025FC38 /* ToastModel.swift */; };
+		C120F3BD1E60985A0025FC38 /* ToastActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3BC1E60985A0025FC38 /* ToastActions.swift */; };
+		C120F3BF1E60A8390025FC38 /* ToastReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3BE1E60A8390025FC38 /* ToastReducer.swift */; };
+		C120F3C11E60A9050025FC38 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3C01E60A9050025FC38 /* AppReducer.swift */; };
+		C120F3C31E60AA0F0025FC38 /* EventsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3C21E60AA0F0025FC38 /* EventsReducer.swift */; };
+		C120F3C61E60B6BC0025FC38 /* ToastSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3C51E60B6BC0025FC38 /* ToastSpec.swift */; };
 		C1B758341E6045900084D67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758331E6045900084D67E /* AppDelegate.swift */; };
 		C1B758361E6045900084D67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* ViewController.swift */; };
 		C1B758391E6045900084D67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B758371E6045900084D67E /* Main.storyboard */; };
 		C1B7583B1E6045900084D67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B7583A1E6045900084D67E /* Assets.xcassets */; };
 		C1B7583E1E6045900084D67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B7583C1E6045900084D67E /* LaunchScreen.storyboard */; };
-		C1B758491E6045900084D67E /* OctowireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758481E6045900084D67E /* OctowireTests.swift */; };
 		C1B758541E6045900084D67E /* OctowireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758531E6045900084D67E /* OctowireUITests.swift */; };
 		CE3831A5D5C065605C2AD696 /* Pods_OctowireTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6C5A84F732F9F7CADA58C1 /* Pods_OctowireTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +48,13 @@
 		8CB30126E6E0074B84C33716 /* Pods-OctowireUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctowireUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctowireUITests/Pods-OctowireUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		937DECB61A317CDF8735FA2C /* Pods-OctowireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctowireTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctowireTests/Pods-OctowireTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FA03CC8771A538D39D41B56 /* Pods_OctowireUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctowireUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C120F3B51E6093B00025FC38 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		C120F3BA1E6098190025FC38 /* ToastModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastModel.swift; sourceTree = "<group>"; };
+		C120F3BC1E60985A0025FC38 /* ToastActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastActions.swift; sourceTree = "<group>"; };
+		C120F3BE1E60A8390025FC38 /* ToastReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastReducer.swift; sourceTree = "<group>"; };
+		C120F3C01E60A9050025FC38 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		C120F3C21E60AA0F0025FC38 /* EventsReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsReducer.swift; sourceTree = "<group>"; };
+		C120F3C51E60B6BC0025FC38 /* ToastSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastSpec.swift; sourceTree = "<group>"; };
 		C1B758301E6045900084D67E /* Octowire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octowire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758331E6045900084D67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B758351E6045900084D67E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +63,6 @@
 		C1B7583D1E6045900084D67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1B7583F1E6045900084D67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1B758441E6045900084D67E /* OctowireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctowireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1B758481E6045900084D67E /* OctowireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctowireTests.swift; sourceTree = "<group>"; };
 		C1B7584A1E6045900084D67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1B7584F1E6045900084D67E /* OctowireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctowireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758531E6045900084D67E /* OctowireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctowireUITests.swift; sourceTree = "<group>"; };
@@ -112,6 +124,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C120F3B71E6094BC0025FC38 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				C120F3BC1E60985A0025FC38 /* ToastActions.swift */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		C120F3B81E6094C40025FC38 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				C120F3C01E60A9050025FC38 /* AppReducer.swift */,
+				C120F3C21E60AA0F0025FC38 /* EventsReducer.swift */,
+				C120F3BE1E60A8390025FC38 /* ToastReducer.swift */,
+			);
+			name = Reducers;
+			sourceTree = "<group>";
+		};
+		C120F3B91E6097FA0025FC38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C120F3BA1E6098190025FC38 /* ToastModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C120F3C41E60AECB0025FC38 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1B758351E6045900084D67E /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C1B758271E6045900084D67E = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				C1B758331E6045900084D67E /* AppDelegate.swift */,
-				C1B758351E6045900084D67E /* ViewController.swift */,
+				C120F3B51E6093B00025FC38 /* AppState.swift */,
+				C120F3B91E6097FA0025FC38 /* Models */,
+				C120F3B71E6094BC0025FC38 /* Actions */,
+				C120F3B81E6094C40025FC38 /* Reducers */,
+				C120F3C41E60AECB0025FC38 /* ViewControllers */,
 				C1B758371E6045900084D67E /* Main.storyboard */,
 				C1B7583A1E6045900084D67E /* Assets.xcassets */,
 				C1B7583C1E6045900084D67E /* LaunchScreen.storyboard */,
@@ -150,8 +200,8 @@
 		C1B758471E6045900084D67E /* OctowireTests */ = {
 			isa = PBXGroup;
 			children = (
-				C1B758481E6045900084D67E /* OctowireTests.swift */,
 				C1B7584A1E6045900084D67E /* Info.plist */,
+				C120F3C51E60B6BC0025FC38 /* ToastSpec.swift */,
 			);
 			path = OctowireTests;
 			sourceTree = "<group>";
@@ -159,8 +209,8 @@
 		C1B758521E6045900084D67E /* OctowireUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C1B758531E6045900084D67E /* OctowireUITests.swift */,
 				C1B758551E6045900084D67E /* Info.plist */,
+				C1B758531E6045900084D67E /* OctowireUITests.swift */,
 			);
 			path = OctowireUITests;
 			sourceTree = "<group>";
@@ -446,8 +496,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C120F3BF1E60A8390025FC38 /* ToastReducer.swift in Sources */,
+				C120F3BD1E60985A0025FC38 /* ToastActions.swift in Sources */,
+				C120F3C11E60A9050025FC38 /* AppReducer.swift in Sources */,
+				C120F3B61E6093B00025FC38 /* AppState.swift in Sources */,
 				C1B758361E6045900084D67E /* ViewController.swift in Sources */,
+				C120F3C31E60AA0F0025FC38 /* EventsReducer.swift in Sources */,
 				C1B758341E6045900084D67E /* AppDelegate.swift in Sources */,
+				C120F3BB1E6098190025FC38 /* ToastModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1B758491E6045900084D67E /* OctowireTests.swift in Sources */,
+				C120F3C61E60B6BC0025FC38 /* ToastSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

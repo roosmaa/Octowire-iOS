@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import ReSwift
+
+struct EventsState: StateType {
+    var scrollTopDistance: Float32
+    var isRealtime: Bool
+    var visibleEvents: [Any]
+    var isLoadingEvents: Bool
+    var upcomingEvents: [Any]
+}
+
+struct ToastState: StateType {
+    var visibleToasts: [ToastModel]
+}
+
+struct AppState: StateType {
+    var toastState: ToastState
+    var eventsState: EventsState
+}

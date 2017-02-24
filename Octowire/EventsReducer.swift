@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import ReSwift
+
+struct EventsReducer: Reducer {
+    func handleAction(action: Action, state: EventsState?) -> EventsState {
+        var state = state ?? EventsState(
+            scrollTopDistance: 0,
+            isRealtime: true,
+            visibleEvents: [],
+            isLoadingEvents: false,
+            upcomingEvents: [])
+        
+        switch action {
+        default:
+            break
+        }
+        
+        return state
+    }
+}
