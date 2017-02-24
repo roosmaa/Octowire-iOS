@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		302101A27C81453F8DD1AE1F /* Pods_Octowire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BF6D2D02B5AE043238280E /* Pods_Octowire.framework */; };
+		A326AEF8911C6D174C1F2525 /* Pods_OctowireUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA03CC8771A538D39D41B56 /* Pods_OctowireUITests.framework */; };
 		C1B758341E6045900084D67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758331E6045900084D67E /* AppDelegate.swift */; };
 		C1B758361E6045900084D67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* ViewController.swift */; };
 		C1B758391E6045900084D67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B758371E6045900084D67E /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		C1B7583E1E6045900084D67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B7583C1E6045900084D67E /* LaunchScreen.storyboard */; };
 		C1B758491E6045900084D67E /* OctowireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758481E6045900084D67E /* OctowireTests.swift */; };
 		C1B758541E6045900084D67E /* OctowireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758531E6045900084D67E /* OctowireUITests.swift */; };
+		CE3831A5D5C065605C2AD696 /* Pods_OctowireTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6C5A84F732F9F7CADA58C1 /* Pods_OctowireTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D6C5A84F732F9F7CADA58C1 /* Pods_OctowireTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctowireTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FD014841187E2D52C5FC76 /* Pods-Octowire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Octowire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Octowire/Pods-Octowire.release.xcconfig"; sourceTree = "<group>"; };
+		8CB30126E6E0074B84C33716 /* Pods-OctowireUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctowireUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctowireUITests/Pods-OctowireUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		937DECB61A317CDF8735FA2C /* Pods-OctowireTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctowireTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctowireTests/Pods-OctowireTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA03CC8771A538D39D41B56 /* Pods_OctowireUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctowireUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758301E6045900084D67E /* Octowire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octowire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758331E6045900084D67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B758351E6045900084D67E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		C1B7584F1E6045900084D67E /* OctowireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctowireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758531E6045900084D67E /* OctowireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctowireUITests.swift; sourceTree = "<group>"; };
 		C1B758551E6045900084D67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2BF6D2D02B5AE043238280E /* Pods_Octowire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Octowire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D396AC5C41854E7E176F7633 /* Pods-OctowireTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctowireTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OctowireTests/Pods-OctowireTests.release.xcconfig"; sourceTree = "<group>"; };
+		D3F399EFB0CCC8B69ED9A467 /* Pods-OctowireUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctowireUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OctowireUITests/Pods-OctowireUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F9E0D7FBA0334DE7CEA58461 /* Pods-Octowire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Octowire.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Octowire/Pods-Octowire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				302101A27C81453F8DD1AE1F /* Pods_Octowire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3831A5D5C065605C2AD696 /* Pods_OctowireTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A326AEF8911C6D174C1F2525 /* Pods_OctowireUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B955432FECA45F517877EEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9E0D7FBA0334DE7CEA58461 /* Pods-Octowire.debug.xcconfig */,
+				52FD014841187E2D52C5FC76 /* Pods-Octowire.release.xcconfig */,
+				937DECB61A317CDF8735FA2C /* Pods-OctowireTests.debug.xcconfig */,
+				D396AC5C41854E7E176F7633 /* Pods-OctowireTests.release.xcconfig */,
+				8CB30126E6E0074B84C33716 /* Pods-OctowireUITests.debug.xcconfig */,
+				D3F399EFB0CCC8B69ED9A467 /* Pods-OctowireUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7E86C0BB1A6BDFCAB4A4AA6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2BF6D2D02B5AE043238280E /* Pods_Octowire.framework */,
+				0D6C5A84F732F9F7CADA58C1 /* Pods_OctowireTests.framework */,
+				9FA03CC8771A538D39D41B56 /* Pods_OctowireUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C1B758271E6045900084D67E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				C1B758471E6045900084D67E /* OctowireTests */,
 				C1B758521E6045900084D67E /* OctowireUITests */,
 				C1B758311E6045900084D67E /* Products */,
+				5B955432FECA45F517877EEF /* Pods */,
+				7E86C0BB1A6BDFCAB4A4AA6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1B758581E6045900084D67E /* Build configuration list for PBXNativeTarget "Octowire" */;
 			buildPhases = (
+				0C444A721AD64A087C2B0B04 /* [CP] Check Pods Manifest.lock */,
 				C1B7582C1E6045900084D67E /* Sources */,
 				C1B7582D1E6045900084D67E /* Frameworks */,
 				C1B7582E1E6045900084D67E /* Resources */,
+				29A1BFD731256C9DEA37A9CF /* [CP] Embed Pods Frameworks */,
+				4C737036A327D033A5047257 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1B7585B1E6045900084D67E /* Build configuration list for PBXNativeTarget "OctowireTests" */;
 			buildPhases = (
+				BBCFE7DB0F39FB6EE3CAD77F /* [CP] Check Pods Manifest.lock */,
 				C1B758401E6045900084D67E /* Sources */,
 				C1B758411E6045900084D67E /* Frameworks */,
 				C1B758421E6045900084D67E /* Resources */,
+				306855E36CAEF8ABBBE88B50 /* [CP] Embed Pods Frameworks */,
+				E3179D992C1B224240DFB9F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1B7585E1E6045900084D67E /* Build configuration list for PBXNativeTarget "OctowireUITests" */;
 			buildPhases = (
+				9041D243C3EC1054669FD343 /* [CP] Check Pods Manifest.lock */,
 				C1B7584B1E6045900084D67E /* Sources */,
 				C1B7584C1E6045900084D67E /* Frameworks */,
 				C1B7584D1E6045900084D67E /* Resources */,
+				ACF5C4CC7A353F6FA78A6370 /* [CP] Embed Pods Frameworks */,
+				977C9D9A3482E32678126DD1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +303,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C444A721AD64A087C2B0B04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29A1BFD731256C9DEA37A9CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Octowire/Pods-Octowire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		306855E36CAEF8ABBBE88B50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctowireTests/Pods-OctowireTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C737036A327D033A5047257 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Octowire/Pods-Octowire-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9041D243C3EC1054669FD343 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		977C9D9A3482E32678126DD1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctowireUITests/Pods-OctowireUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACF5C4CC7A353F6FA78A6370 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctowireUITests/Pods-OctowireUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBCFE7DB0F39FB6EE3CAD77F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3179D992C1B224240DFB9F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctowireTests/Pods-OctowireTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C1B7582C1E6045900084D67E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,6 +505,7 @@
 		C1B758561E6045900084D67E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -368,6 +556,7 @@
 		C1B758571E6045900084D67E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -410,7 +599,9 @@
 		};
 		C1B758591E6045900084D67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9E0D7FBA0334DE7CEA58461 /* Pods-Octowire.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Octowire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -422,7 +613,9 @@
 		};
 		C1B7585A1E6045900084D67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52FD014841187E2D52C5FC76 /* Pods-Octowire.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Octowire/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,8 +627,9 @@
 		};
 		C1B7585C1E6045900084D67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 937DECB61A317CDF8735FA2C /* Pods-OctowireTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OctowireTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -448,8 +642,9 @@
 		};
 		C1B7585D1E6045900084D67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D396AC5C41854E7E176F7633 /* Pods-OctowireTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OctowireTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -462,8 +657,9 @@
 		};
 		C1B7585F1E6045900084D67E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CB30126E6E0074B84C33716 /* Pods-OctowireUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = OctowireUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.roosmaa.OctowireUITests;
@@ -475,8 +671,9 @@
 		};
 		C1B758601E6045900084D67E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F399EFB0CCC8B69ED9A467 /* Pods-OctowireUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = OctowireUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.roosmaa.OctowireUITests;
@@ -505,6 +702,7 @@
 				C1B7585A1E6045900084D67E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1B7585B1E6045900084D67E /* Build configuration list for PBXNativeTarget "OctowireTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +711,7 @@
 				C1B7585D1E6045900084D67E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C1B7585E1E6045900084D67E /* Build configuration list for PBXNativeTarget "OctowireUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +720,7 @@
 				C1B758601E6045900084D67E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.3.0)
+  - AlamofireObjectMapper (4.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 2.0)
+  - Kingfisher (3.5.0)
+  - Nimble (6.0.1)
+  - ObjectMapper (2.2.3)
+  - Quick (1.1.0)
+  - ReSwift (3.0.0)
+  - RxBlocking (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
+  - RxTest (3.2.0):
+    - RxSwift (~> 3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.3)
+  - AlamofireObjectMapper (~> 4.0)
+  - Kingfisher (~> 3.0)
+  - Nimble
+  - ObjectMapper (~> 2.2)
+  - Quick
+  - ReSwift (~> 3.0)
+  - RxBlocking (~> 3.0)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
+  - RxTest (~> 3.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
+  Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
+  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
+  ObjectMapper: d3b3de11267f5d971f390eb8d63dd509116a4329
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  ReSwift: f0255f4b4f2dacd12c5d97d34d13fc5dad6d6371
+  RxBlocking: ec8ed471ba77b4fb98a2d60f1f8419b0b46eaa23
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
+
+PODFILE CHECKSUM: 4d130def3d3e5126f7fb0776583142c2238a6eea
+
+COCOAPODS: 1.2.0
