@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C1B758341E6045900084D67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758331E6045900084D67E /* AppDelegate.swift */; };
+		C1B758361E6045900084D67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* ViewController.swift */; };
+		C1B758391E6045900084D67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B758371E6045900084D67E /* Main.storyboard */; };
+		C1B7583B1E6045900084D67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B7583A1E6045900084D67E /* Assets.xcassets */; };
+		C1B7583E1E6045900084D67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B7583C1E6045900084D67E /* LaunchScreen.storyboard */; };
+		C1B758491E6045900084D67E /* OctowireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758481E6045900084D67E /* OctowireTests.swift */; };
+		C1B758541E6045900084D67E /* OctowireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758531E6045900084D67E /* OctowireUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1B758451E6045900084D67E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1B758281E6045900084D67E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1B7582F1E6045900084D67E;
+			remoteInfo = Octowire;
+		};
+		C1B758501E6045900084D67E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1B758281E6045900084D67E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1B7582F1E6045900084D67E;
+			remoteInfo = Octowire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C1B758301E6045900084D67E /* Octowire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octowire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B758331E6045900084D67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1B758351E6045900084D67E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1B758381E6045900084D67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C1B7583A1E6045900084D67E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C1B7583D1E6045900084D67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1B7583F1E6045900084D67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1B758441E6045900084D67E /* OctowireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctowireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B758481E6045900084D67E /* OctowireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctowireTests.swift; sourceTree = "<group>"; };
+		C1B7584A1E6045900084D67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1B7584F1E6045900084D67E /* OctowireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctowireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B758531E6045900084D67E /* OctowireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctowireUITests.swift; sourceTree = "<group>"; };
+		C1B758551E6045900084D67E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1B7582D1E6045900084D67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B758411E6045900084D67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B7584C1E6045900084D67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1B758271E6045900084D67E = {
+			isa = PBXGroup;
+			children = (
+				C1B758321E6045900084D67E /* Octowire */,
+				C1B758471E6045900084D67E /* OctowireTests */,
+				C1B758521E6045900084D67E /* OctowireUITests */,
+				C1B758311E6045900084D67E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1B758311E6045900084D67E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1B758301E6045900084D67E /* Octowire.app */,
+				C1B758441E6045900084D67E /* OctowireTests.xctest */,
+				C1B7584F1E6045900084D67E /* OctowireUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1B758321E6045900084D67E /* Octowire */ = {
+			isa = PBXGroup;
+			children = (
+				C1B758331E6045900084D67E /* AppDelegate.swift */,
+				C1B758351E6045900084D67E /* ViewController.swift */,
+				C1B758371E6045900084D67E /* Main.storyboard */,
+				C1B7583A1E6045900084D67E /* Assets.xcassets */,
+				C1B7583C1E6045900084D67E /* LaunchScreen.storyboard */,
+				C1B7583F1E6045900084D67E /* Info.plist */,
+			);
+			path = Octowire;
+			sourceTree = "<group>";
+		};
+		C1B758471E6045900084D67E /* OctowireTests */ = {
+			isa = PBXGroup;
+			children = (
+				C1B758481E6045900084D67E /* OctowireTests.swift */,
+				C1B7584A1E6045900084D67E /* Info.plist */,
+			);
+			path = OctowireTests;
+			sourceTree = "<group>";
+		};
+		C1B758521E6045900084D67E /* OctowireUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C1B758531E6045900084D67E /* OctowireUITests.swift */,
+				C1B758551E6045900084D67E /* Info.plist */,
+			);
+			path = OctowireUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1B7582F1E6045900084D67E /* Octowire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B758581E6045900084D67E /* Build configuration list for PBXNativeTarget "Octowire" */;
+			buildPhases = (
+				C1B7582C1E6045900084D67E /* Sources */,
+				C1B7582D1E6045900084D67E /* Frameworks */,
+				C1B7582E1E6045900084D67E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Octowire;
+			productName = Octowire;
+			productReference = C1B758301E6045900084D67E /* Octowire.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C1B758431E6045900084D67E /* OctowireTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B7585B1E6045900084D67E /* Build configuration list for PBXNativeTarget "OctowireTests" */;
+			buildPhases = (
+				C1B758401E6045900084D67E /* Sources */,
+				C1B758411E6045900084D67E /* Frameworks */,
+				C1B758421E6045900084D67E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1B758461E6045900084D67E /* PBXTargetDependency */,
+			);
+			name = OctowireTests;
+			productName = OctowireTests;
+			productReference = C1B758441E6045900084D67E /* OctowireTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C1B7584E1E6045900084D67E /* OctowireUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1B7585E1E6045900084D67E /* Build configuration list for PBXNativeTarget "OctowireUITests" */;
+			buildPhases = (
+				C1B7584B1E6045900084D67E /* Sources */,
+				C1B7584C1E6045900084D67E /* Frameworks */,
+				C1B7584D1E6045900084D67E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1B758511E6045900084D67E /* PBXTargetDependency */,
+			);
+			name = OctowireUITests;
+			productName = OctowireUITests;
+			productReference = C1B7584F1E6045900084D67E /* OctowireUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1B758281E6045900084D67E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Mart Roosmaa";
+				TargetAttributes = {
+					C1B7582F1E6045900084D67E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					C1B758431E6045900084D67E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C1B7582F1E6045900084D67E;
+					};
+					C1B7584E1E6045900084D67E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C1B7582F1E6045900084D67E;
+					};
+				};
+			};
+			buildConfigurationList = C1B7582B1E6045900084D67E /* Build configuration list for PBXProject "Octowire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C1B758271E6045900084D67E;
+			productRefGroup = C1B758311E6045900084D67E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1B7582F1E6045900084D67E /* Octowire */,
+				C1B758431E6045900084D67E /* OctowireTests */,
+				C1B7584E1E6045900084D67E /* OctowireUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1B7582E1E6045900084D67E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B7583E1E6045900084D67E /* LaunchScreen.storyboard in Resources */,
+				C1B7583B1E6045900084D67E /* Assets.xcassets in Resources */,
+				C1B758391E6045900084D67E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B758421E6045900084D67E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B7584D1E6045900084D67E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1B7582C1E6045900084D67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B758361E6045900084D67E /* ViewController.swift in Sources */,
+				C1B758341E6045900084D67E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B758401E6045900084D67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B758491E6045900084D67E /* OctowireTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B7584B1E6045900084D67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B758541E6045900084D67E /* OctowireUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C1B758461E6045900084D67E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1B7582F1E6045900084D67E /* Octowire */;
+			targetProxy = C1B758451E6045900084D67E /* PBXContainerItemProxy */;
+		};
+		C1B758511E6045900084D67E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1B7582F1E6045900084D67E /* Octowire */;
+			targetProxy = C1B758501E6045900084D67E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C1B758371E6045900084D67E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1B758381E6045900084D67E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C1B7583C1E6045900084D67E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1B7583D1E6045900084D67E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1B758561E6045900084D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C1B758571E6045900084D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1B758591E6045900084D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Octowire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.roosmaa.Octowire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C1B7585A1E6045900084D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Octowire/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.roosmaa.Octowire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C1B7585C1E6045900084D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OctowireTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.roosmaa.OctowireTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Octowire.app/Octowire";
+			};
+			name = Debug;
+		};
+		C1B7585D1E6045900084D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OctowireTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.roosmaa.OctowireTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Octowire.app/Octowire";
+			};
+			name = Release;
+		};
+		C1B7585F1E6045900084D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = OctowireUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.roosmaa.OctowireUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Octowire;
+			};
+			name = Debug;
+		};
+		C1B758601E6045900084D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = OctowireUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.roosmaa.OctowireUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Octowire;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1B7582B1E6045900084D67E /* Build configuration list for PBXProject "Octowire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B758561E6045900084D67E /* Debug */,
+				C1B758571E6045900084D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1B758581E6045900084D67E /* Build configuration list for PBXNativeTarget "Octowire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B758591E6045900084D67E /* Debug */,
+				C1B7585A1E6045900084D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C1B7585B1E6045900084D67E /* Build configuration list for PBXNativeTarget "OctowireTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B7585C1E6045900084D67E /* Debug */,
+				C1B7585D1E6045900084D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C1B7585E1E6045900084D67E /* Build configuration list for PBXNativeTarget "OctowireUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1B7585F1E6045900084D67E /* Debug */,
+				C1B758601E6045900084D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1B758281E6045900084D67E /* Project object */;
+}
