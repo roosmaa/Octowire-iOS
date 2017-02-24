@@ -11,6 +11,8 @@ target 'Octowire' do
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'Kingfisher',            '~> 3.0'
 
+  pod 'ReSwiftRecorder'
+
   def testing_pods
     pod 'RxBlocking', '~> 3.0'
     pod 'RxTest',     '~> 3.0'
