@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,35 +9,91 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Events View Controller-->
+        <!--GitHub activity-->
         <scene sceneID="loL-Hc-VLc">
             <objects>
-                <viewController storyboardIdentifier="Events" id="rpn-WI-VbW" customClass="EventsViewController" customModule="Octowire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Events" title="GitHub activity" id="rpn-WI-VbW" customClass="EventsViewController" customModule="Octowire" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O33-g4-gsI"/>
                         <viewControllerLayoutGuide type="bottom" id="F9e-qt-7c5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uHX-Kj-RdZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUv-Ny-nT2">
-                                <rect key="frame" x="128.5" y="313" width="117" height="40"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="Open Jane">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextTapped:" destination="rpn-WI-VbW" eventType="touchUpInside" id="2nH-FS-CZY"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iSu-Ny-PSX">
+                                <rect key="frame" x="29" y="504" width="262" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G99-6P-xZU">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="RepositoryIcon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA5-i7-GcJ">
+                                        <rect key="frame" x="66" y="0.0" width="64" height="64"/>
+                                        <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="StarIcon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb3-Q4-Gz8">
+                                        <rect key="frame" x="132" y="0.0" width="64" height="64"/>
+                                        <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="PullRequestIcon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubH-Ri-AfF">
+                                        <rect key="frame" x="198" y="0.0" width="64" height="64"/>
+                                        <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="ForkIcon"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0D-jF-bXk">
+                                <rect key="frame" x="0.0" y="503" width="320" height="1"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="9XN-Bl-UJA"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-TP-YO2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="439"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UHj-is-PMC">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nYe-1w-HpT">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.68128456867555687" blue="0.60653834447324551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PUv-Ny-nT2" firstAttribute="centerX" secondItem="uHX-Kj-RdZ" secondAttribute="centerX" id="V6d-iJ-s8H"/>
-                            <constraint firstItem="PUv-Ny-nT2" firstAttribute="centerY" secondItem="uHX-Kj-RdZ" secondAttribute="centerY" id="kSW-ql-BNd"/>
+                            <constraint firstItem="s0D-jF-bXk" firstAttribute="leading" secondItem="uHX-Kj-RdZ" secondAttribute="leading" id="9BG-HY-tjg"/>
+                            <constraint firstItem="iSu-Ny-PSX" firstAttribute="top" secondItem="s0D-jF-bXk" secondAttribute="bottom" id="EO5-gc-wli"/>
+                            <constraint firstItem="iSu-Ny-PSX" firstAttribute="centerX" secondItem="uHX-Kj-RdZ" secondAttribute="centerX" id="LTj-LM-G5D"/>
+                            <constraint firstItem="Sef-TP-YO2" firstAttribute="leading" secondItem="uHX-Kj-RdZ" secondAttribute="leading" id="QFH-Id-H4C"/>
+                            <constraint firstItem="Sef-TP-YO2" firstAttribute="top" secondItem="O33-g4-gsI" secondAttribute="bottom" id="Xme-ji-MLr"/>
+                            <constraint firstAttribute="trailing" secondItem="Sef-TP-YO2" secondAttribute="trailing" id="jZU-eT-boF"/>
+                            <constraint firstItem="F9e-qt-7c5" firstAttribute="top" secondItem="iSu-Ny-PSX" secondAttribute="bottom" id="m6g-Ee-u2J"/>
+                            <constraint firstItem="s0D-jF-bXk" firstAttribute="top" secondItem="Sef-TP-YO2" secondAttribute="bottom" id="tRn-jf-HB2"/>
+                            <constraint firstAttribute="trailing" secondItem="s0D-jF-bXk" secondAttribute="trailing" id="uYK-nt-GKM"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="filterForkButton" destination="ubH-Ri-AfF" id="lTA-aJ-KpD"/>
+                        <outlet property="filterPullRequestButton" destination="Cb3-Q4-Gz8" id="rYX-4i-Qsv"/>
+                        <outlet property="filterRepoButton" destination="G99-6P-xZU" id="Yxd-fZ-B6R"/>
+                        <outlet property="filterStarButton" destination="hA5-i7-GcJ" id="Cfb-Q3-db9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-LO-ITC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,53 +108,21 @@
                         <viewControllerLayoutGuide type="bottom" id="mrx-FV-MKg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Elc-Xf-t5v">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHZ-uz-rkD">
-                                <rect key="frame" x="141" y="313" width="92" height="40"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="Go back">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backTapped:" destination="RHa-zs-HCK" eventType="touchUpInside" id="jzw-7F-Bsi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3A-Sl-8fd">
-                                <rect key="frame" x="127.5" y="361" width="119" height="40"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                <state key="normal" title="Open John">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="nextTapped:" destination="RHa-zs-HCK" eventType="touchUpInside" id="Mes-fd-eqp"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCC-wM-eTz">
-                                <rect key="frame" x="98" y="182.5" width="178.5" height="30.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.65688172087913699" green="1" blue="0.65625873730907069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="zCC-wM-eTz" firstAttribute="centerX" secondItem="Elc-Xf-t5v" secondAttribute="centerX" id="77B-eC-sEX"/>
-                            <constraint firstItem="G3A-Sl-8fd" firstAttribute="top" secondItem="wHZ-uz-rkD" secondAttribute="bottom" constant="8" id="A0b-Lz-y4o"/>
-                            <constraint firstItem="G3A-Sl-8fd" firstAttribute="centerX" secondItem="Elc-Xf-t5v" secondAttribute="centerX" id="Bvr-xz-UzK"/>
-                            <constraint firstItem="wHZ-uz-rkD" firstAttribute="centerY" secondItem="Elc-Xf-t5v" secondAttribute="centerY" id="Can-2t-pb7"/>
-                            <constraint firstItem="wHZ-uz-rkD" firstAttribute="centerX" secondItem="Elc-Xf-t5v" secondAttribute="centerX" id="fKZ-C1-MG9"/>
-                            <constraint firstItem="wHZ-uz-rkD" firstAttribute="top" secondItem="zCC-wM-eTz" secondAttribute="bottom" constant="100" id="trK-pI-mhO"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="nameLabel" destination="zCC-wM-eTz" id="Il6-rC-z7U"/>
-                    </connections>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUM-2c-JYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-94" y="104"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ForkIcon" width="64" height="64"/>
+        <image name="PullRequestIcon" width="64" height="64"/>
+        <image name="RepositoryIcon" width="64" height="64"/>
+        <image name="StarIcon" width="64" height="64"/>
+    </resources>
 </document>

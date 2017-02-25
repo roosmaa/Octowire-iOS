@@ -7,9 +7,27 @@
 //
 
 import UIKit
+import ReSwift
 
 class EventsViewController: UIViewController {
-    @IBAction func nextTapped(_ sender: Any) {
-        mainStore.dispatch(NavigationActionStackPush(route: .userProfile(username: "Jane")))
+    @IBOutlet weak var filterRepoButton: UIButton!
+    @IBOutlet weak var filterStarButton: UIButton!
+    @IBOutlet weak var filterPullRequestButton: UIButton!
+    @IBOutlet weak var filterForkButton: UIButton!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        mainStore.subscribe(self) { $0.eventsState }
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        mainStore.unsubscribe(self)
+        super.viewWillDisappear(animated)
+    }
+}
+
+extension EventsViewController: StoreSubscriber {
+    func newState(state: EventsState) {
+        
     }
 }

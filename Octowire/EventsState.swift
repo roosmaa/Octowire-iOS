@@ -9,10 +9,18 @@
 import Foundation
 import ReSwift
 
+enum EventsFilter {
+    case repoEvents
+    case starEvents
+    case pullRequestEvents
+    case forkEvents
+}
+
 struct EventsState: StateType {
     var scrollTopDistance: Float32
     var isRealtime: Bool
-    var visibleEvents: [Any]
+    var activeFilters: [EventsFilter]
+    var events: [Any]
     var isLoadingEvents: Bool
-    var upcomingEvents: [Any]
+    var preloadedEvents: [Any]
 }

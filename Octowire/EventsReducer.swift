@@ -14,9 +14,10 @@ struct EventsReducer: Reducer {
         var state = state ?? EventsState(
             scrollTopDistance: 0,
             isRealtime: true,
-            visibleEvents: [],
+            activeFilters: [],
+            events: [],
             isLoadingEvents: false,
-            upcomingEvents: [])
+            preloadedEvents: [])
         
         switch action {
         default:
