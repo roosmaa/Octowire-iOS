@@ -56,9 +56,7 @@ extension ToastController: StoreSubscriber {
         return view
     }
     
-    func newState(state: AppState) {
-        let toastState = state.toastState
-        
+    func newState(state: ToastState) {
         var visibleToastIds: [UUID] = []
         var viewsToDismiss: [RMessageView] = []
         var viewsToKeep: [RMessageView] = []
@@ -69,7 +67,7 @@ extension ToastController: StoreSubscriber {
                 continue
             }
             
-            let isVisible = toastState.visibleToasts.contains(where: { $0.id == toastId })
+            let isVisible = state.visibleToasts.contains(where: { $0.id == toastId })
             if isVisible {
                 viewsToKeep.append(v)
                 visibleToastIds.append(toastId)
@@ -85,7 +83,7 @@ extension ToastController: StoreSubscriber {
         self.toastViews = viewsToKeep
         
         // Show new toast messages
-        let newToasts = toastState.visibleToasts.filter { toastModel in
+        let newToasts = state.visibleToasts.filter { toastModel in
             return !visibleToastIds.contains(toastModel.id)
         }
         for toastModel in newToasts {

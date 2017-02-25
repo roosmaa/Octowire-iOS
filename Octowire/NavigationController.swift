@@ -21,8 +21,8 @@ class NavigationController: UINavigationController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        mainStore.subscribe(self)
-        mainStore.subscribe(toastController)
+        mainStore.subscribe(self) { $0.navigationState }
+        mainStore.subscribe(toastController) { $0.toastState }
         
         super.viewWillAppear(animated)
     }
@@ -49,14 +49,12 @@ extension NavigationController: UINavigationControllerDelegate {
 }
 
 extension NavigationController: StoreSubscriber {
-    func newState(state: AppState) {
-        let navigationState = state.navigationState
-        
-        let animated = self.animationCounter < navigationState.animationCounter
-        self.animationCounter = navigationState.animationCounter
+    func newState(state: NavigationState) {
+        let animated = self.animationCounter < state.animationCounter
+        self.animationCounter = state.animationCounter
         
         var viewControllers = self.viewControllers
-        self.setViewControllers(navigationState.stack.map { route in
+        self.setViewControllers(state.stack.map { route in
             if let idx = viewControllers.index(where: { $0.route == route }) {
                 return viewControllers.remove(at: idx)
             } else {
