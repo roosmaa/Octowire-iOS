@@ -25,6 +25,7 @@
 		C120F3D51E60E8A10025FC38 /* NavigationStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */; };
 		C17056EC1E6102800050C15D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056EB1E6102800050C15D /* EventsViewController.swift */; };
 		C17056EE1E61028D0050C15D /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056ED1E61028D0050C15D /* UserProfileViewController.swift */; };
+		C17056F01E61C50B0050C15D /* ToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056EF1E61C50B0050C15D /* ToastController.swift */; };
 		C1B758341E6045900084D67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758331E6045900084D67E /* AppDelegate.swift */; };
 		C1B758361E6045900084D67E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* NavigationController.swift */; };
 		C1B758391E6045900084D67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B758371E6045900084D67E /* Main.storyboard */; };
@@ -73,6 +74,7 @@
 		C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStateSpec.swift; sourceTree = "<group>"; };
 		C17056EB1E6102800050C15D /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		C17056ED1E61028D0050C15D /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		C17056EF1E61C50B0050C15D /* ToastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastController.swift; sourceTree = "<group>"; };
 		C1B758301E6045900084D67E /* Octowire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octowire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758331E6045900084D67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B758351E6045900084D67E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				C17056EB1E6102800050C15D /* EventsViewController.swift */,
 				C1B758351E6045900084D67E /* NavigationController.swift */,
 				C17056ED1E61028D0050C15D /* UserProfileViewController.swift */,
+				C17056EF1E61C50B0050C15D /* ToastController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				C120F3D31E60DCEF0025FC38 /* Routes.swift in Sources */,
 				C120F3CB1E60CB2A0025FC38 /* ToastState.swift in Sources */,
 				C120F3BD1E60985A0025FC38 /* ToastActions.swift in Sources */,
+				C17056F01E61C50B0050C15D /* ToastController.swift in Sources */,
 				C120F3C11E60A9050025FC38 /* AppReducer.swift in Sources */,
 				C120F3D11E60CF880025FC38 /* NavigationReducer.swift in Sources */,
 				C120F3B61E6093B00025FC38 /* AppState.swift in Sources */,

@@ -11,19 +11,24 @@ import ReSwift
 
 class NavigationController: UINavigationController {
     fileprivate var animationCounter: UInt64 = 0
+    private var toastController: ToastController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        
+        toastController = ToastController(viewController: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         mainStore.subscribe(self)
+        mainStore.subscribe(toastController)
         
         super.viewWillAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        mainStore.unsubscribe(toastController)
         mainStore.unsubscribe(self)
         
         super.viewWillDisappear(animated)

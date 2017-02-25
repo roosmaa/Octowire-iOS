@@ -26,8 +26,8 @@ struct ToastActionShow: StandardActionConvertible {
     
     init(_ standardAction: StandardAction) {
         self.toast = ToastModel(
-            id: standardAction.payload!["id"] as! UUID,
-            type: standardAction.payload!["toastType"] as! ToastType,
+            id: decode(standardAction.payload!["id"]),
+            type: decode(standardAction.payload!["toastType"]),
             message: standardAction.payload!["message"] as! String)
     }
     
@@ -35,8 +35,8 @@ struct ToastActionShow: StandardActionConvertible {
         return StandardAction(
             type: ToastActionShow.type,
             payload: [
-                "id": self.toast.id as AnyObject,
-                "toastType": self.toast.type as AnyObject,
+                "id": encode(self.toast.id),
+                "toastType": encode(self.toast.type),
                 "message": self.toast.message as AnyObject
             ],
             isTypedAction: true)
@@ -52,14 +52,14 @@ struct ToastActionHide: StandardActionConvertible {
     }
     
     init(_ standardAction: StandardAction) {
-        self.id = standardAction.payload!["id"] as! UUID
+        self.id = decode(standardAction.payload!["id"])
     }
     
     func toStandardAction() -> StandardAction {
         return StandardAction(
             type: ToastActionHide.type,
             payload: [
-                "id": self.id as AnyObject,
+                "id": encode(self.id),
                 ],
             isTypedAction: true)
     }
@@ -92,5 +92,28 @@ func showToast(type: ToastType, message: String, duration: Double = 5.0) -> Stor
         }
         
         return nil
+    }
+}
+
+private func encode(_ value: UUID) -> AnyObject {
+    return value.uuidString as AnyObject
+}
+
+private func decode(_ value: AnyObject?) -> UUID {
+    return UUID(uuidString: value as! String)!
+}
+
+private func encode(_ value: ToastType) -> AnyObject {
+    switch (value) {
+    case .error: return "error" as AnyObject
+    case .info: return "info" as AnyObject
+    }
+}
+
+private func decode(_ value: AnyObject?) -> ToastType {
+    switch value as! String {
+    case "error": return .error
+    case "info": return .info
+    default: preconditionFailure("Unknown ToastType value \(value)")
     }
 }
