@@ -15,9 +15,18 @@
 		C120F3BF1E60A8390025FC38 /* ToastReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3BE1E60A8390025FC38 /* ToastReducer.swift */; };
 		C120F3C11E60A9050025FC38 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3C01E60A9050025FC38 /* AppReducer.swift */; };
 		C120F3C31E60AA0F0025FC38 /* EventsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3C21E60AA0F0025FC38 /* EventsReducer.swift */; };
-		C120F3C61E60B6BC0025FC38 /* ToastSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3C51E60B6BC0025FC38 /* ToastSpec.swift */; };
+		C120F3C61E60B6BC0025FC38 /* ToastStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3C51E60B6BC0025FC38 /* ToastStateSpec.swift */; };
+		C120F3C91E60CB120025FC38 /* EventsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3C81E60CB120025FC38 /* EventsState.swift */; };
+		C120F3CB1E60CB2A0025FC38 /* ToastState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3CA1E60CB2A0025FC38 /* ToastState.swift */; };
+		C120F3CD1E60CB3B0025FC38 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3CC1E60CB3B0025FC38 /* NavigationState.swift */; };
+		C120F3CF1E60CC240025FC38 /* NavigationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3CE1E60CC240025FC38 /* NavigationActions.swift */; };
+		C120F3D11E60CF880025FC38 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3D01E60CF880025FC38 /* NavigationReducer.swift */; };
+		C120F3D31E60DCEF0025FC38 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3D21E60DCEF0025FC38 /* Routes.swift */; };
+		C120F3D51E60E8A10025FC38 /* NavigationStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */; };
+		C17056EC1E6102800050C15D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056EB1E6102800050C15D /* EventsViewController.swift */; };
+		C17056EE1E61028D0050C15D /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056ED1E61028D0050C15D /* UserProfileViewController.swift */; };
 		C1B758341E6045900084D67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758331E6045900084D67E /* AppDelegate.swift */; };
-		C1B758361E6045900084D67E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* ViewController.swift */; };
+		C1B758361E6045900084D67E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* NavigationController.swift */; };
 		C1B758391E6045900084D67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B758371E6045900084D67E /* Main.storyboard */; };
 		C1B7583B1E6045900084D67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1B7583A1E6045900084D67E /* Assets.xcassets */; };
 		C1B7583E1E6045900084D67E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B7583C1E6045900084D67E /* LaunchScreen.storyboard */; };
@@ -54,10 +63,19 @@
 		C120F3BE1E60A8390025FC38 /* ToastReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastReducer.swift; sourceTree = "<group>"; };
 		C120F3C01E60A9050025FC38 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		C120F3C21E60AA0F0025FC38 /* EventsReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsReducer.swift; sourceTree = "<group>"; };
-		C120F3C51E60B6BC0025FC38 /* ToastSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastSpec.swift; sourceTree = "<group>"; };
+		C120F3C51E60B6BC0025FC38 /* ToastStateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastStateSpec.swift; sourceTree = "<group>"; };
+		C120F3C81E60CB120025FC38 /* EventsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsState.swift; sourceTree = "<group>"; };
+		C120F3CA1E60CB2A0025FC38 /* ToastState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastState.swift; sourceTree = "<group>"; };
+		C120F3CC1E60CB3B0025FC38 /* NavigationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		C120F3CE1E60CC240025FC38 /* NavigationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationActions.swift; sourceTree = "<group>"; };
+		C120F3D01E60CF880025FC38 /* NavigationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
+		C120F3D21E60DCEF0025FC38 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStateSpec.swift; sourceTree = "<group>"; };
+		C17056EB1E6102800050C15D /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		C17056ED1E61028D0050C15D /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		C1B758301E6045900084D67E /* Octowire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octowire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758331E6045900084D67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1B758351E6045900084D67E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1B758351E6045900084D67E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		C1B758381E6045900084D67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1B7583A1E6045900084D67E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1B7583D1E6045900084D67E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				C120F3BC1E60985A0025FC38 /* ToastActions.swift */,
+				C120F3CE1E60CC240025FC38 /* NavigationActions.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -138,6 +157,7 @@
 				C120F3C01E60A9050025FC38 /* AppReducer.swift */,
 				C120F3C21E60AA0F0025FC38 /* EventsReducer.swift */,
 				C120F3BE1E60A8390025FC38 /* ToastReducer.swift */,
+				C120F3D01E60CF880025FC38 /* NavigationReducer.swift */,
 			);
 			name = Reducers;
 			sourceTree = "<group>";
@@ -153,9 +173,22 @@
 		C120F3C41E60AECB0025FC38 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C1B758351E6045900084D67E /* ViewController.swift */,
+				C17056EB1E6102800050C15D /* EventsViewController.swift */,
+				C1B758351E6045900084D67E /* NavigationController.swift */,
+				C17056ED1E61028D0050C15D /* UserProfileViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C120F3C71E60CAE00025FC38 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				C120F3B51E6093B00025FC38 /* AppState.swift */,
+				C120F3C81E60CB120025FC38 /* EventsState.swift */,
+				C120F3CA1E60CB2A0025FC38 /* ToastState.swift */,
+				C120F3CC1E60CB3B0025FC38 /* NavigationState.swift */,
+			);
+			name = States;
 			sourceTree = "<group>";
 		};
 		C1B758271E6045900084D67E = {
@@ -184,7 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				C1B758331E6045900084D67E /* AppDelegate.swift */,
-				C120F3B51E6093B00025FC38 /* AppState.swift */,
+				C120F3D21E60DCEF0025FC38 /* Routes.swift */,
+				C120F3C71E60CAE00025FC38 /* States */,
 				C120F3B91E6097FA0025FC38 /* Models */,
 				C120F3B71E6094BC0025FC38 /* Actions */,
 				C120F3B81E6094C40025FC38 /* Reducers */,
@@ -201,7 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				C1B7584A1E6045900084D67E /* Info.plist */,
-				C120F3C51E60B6BC0025FC38 /* ToastSpec.swift */,
+				C120F3C51E60B6BC0025FC38 /* ToastStateSpec.swift */,
+				C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */,
 			);
 			path = OctowireTests;
 			sourceTree = "<group>";
@@ -497,13 +532,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C120F3BF1E60A8390025FC38 /* ToastReducer.swift in Sources */,
+				C120F3D31E60DCEF0025FC38 /* Routes.swift in Sources */,
+				C120F3CB1E60CB2A0025FC38 /* ToastState.swift in Sources */,
 				C120F3BD1E60985A0025FC38 /* ToastActions.swift in Sources */,
 				C120F3C11E60A9050025FC38 /* AppReducer.swift in Sources */,
+				C120F3D11E60CF880025FC38 /* NavigationReducer.swift in Sources */,
 				C120F3B61E6093B00025FC38 /* AppState.swift in Sources */,
-				C1B758361E6045900084D67E /* ViewController.swift in Sources */,
+				C120F3CD1E60CB3B0025FC38 /* NavigationState.swift in Sources */,
+				C120F3C91E60CB120025FC38 /* EventsState.swift in Sources */,
+				C17056EE1E61028D0050C15D /* UserProfileViewController.swift in Sources */,
+				C120F3CF1E60CC240025FC38 /* NavigationActions.swift in Sources */,
+				C1B758361E6045900084D67E /* NavigationController.swift in Sources */,
 				C120F3C31E60AA0F0025FC38 /* EventsReducer.swift in Sources */,
 				C1B758341E6045900084D67E /* AppDelegate.swift in Sources */,
 				C120F3BB1E6098190025FC38 /* ToastModel.swift in Sources */,
+				C17056EC1E6102800050C15D /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +554,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C120F3C61E60B6BC0025FC38 /* ToastSpec.swift in Sources */,
+				C120F3D51E60E8A10025FC38 /* NavigationStateSpec.swift in Sources */,
+				C120F3C61E60B6BC0025FC38 /* ToastStateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

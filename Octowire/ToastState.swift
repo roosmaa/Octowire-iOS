@@ -1,5 +1,5 @@
 //
-//  AppState.swift
+//  ToastState.swift
 //  Octowire
 //
 //  Created by Mart Roosmaa on 24/02/2017.
@@ -9,8 +9,6 @@
 import Foundation
 import ReSwift
 
-struct AppState: StateType {
-    var toastState: ToastState
-    var navigationState: NavigationState
-    var eventsState: EventsState
+struct ToastState: StateType {
+    var visibleToasts: [ToastModel]
 }

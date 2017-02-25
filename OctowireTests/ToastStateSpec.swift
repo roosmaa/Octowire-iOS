@@ -19,13 +19,13 @@ class ToastStateSpec: QuickSpec {
                 reducer: ToastReducer(),
                 state: nil)
             
-            let t1 = ToastModel(type: .Info, message: "Hello, world!")
+            let t1 = ToastModel(type: .info, message: "Hello, world!")
             it("shows a toast") {
                 store.dispatch(ToastActionShow(toast: t1))
                 expect(store.state.visibleToasts).to(contain(t1))
             }
             
-            let t2 = ToastModel(type: .Error, message: "Oh noes :(")
+            let t2 = ToastModel(type: .error, message: "Oh noes :(")
             it("shows multiple toasts") {
                 store.dispatch(ToastActionShow(toast: t2))
                 expect(store.state.visibleToasts).to(beginWith(t1))
@@ -49,7 +49,7 @@ class ToastStateSpec: QuickSpec {
                 state: nil)
             
             it("shows and hides the toast") {
-                store.dispatch(showToast(type: .Info, message: "Howdy!", duration: 0.0001));
+                store.dispatch(showToast(type: .info, message: "Howdy!", duration: 0.0001));
                 expect(store.state.toastState.visibleToasts).to(haveCount(1))
                 expect(store.state.toastState.visibleToasts).toEventually(beEmpty())
             }

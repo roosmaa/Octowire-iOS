@@ -9,8 +9,8 @@
 import Foundation
 
 enum ToastType {
-    case Error
-    case Info
+    case error
+    case info
 }
 
 /// ToastModel represents a temporary error/info message
