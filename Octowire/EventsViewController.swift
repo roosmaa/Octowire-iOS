@@ -9,14 +9,14 @@
 import UIKit
 import ReSwift
 
-class EventsViewController: UIViewController {
+class EventsBrowserViewController: UIViewController {
     @IBOutlet weak var filterRepoButton: UIButton!
     @IBOutlet weak var filterStarButton: UIButton!
     @IBOutlet weak var filterPullRequestButton: UIButton!
     @IBOutlet weak var filterForkButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
-        mainStore.subscribe(self) { $0.eventsState }
+        mainStore.subscribe(self) { $0.eventsBrowserState }
         super.viewWillAppear(animated)
     }
     
@@ -26,8 +26,8 @@ class EventsViewController: UIViewController {
     }
 }
 
-extension EventsViewController: StoreSubscriber {
-    func newState(state: EventsState) {
+extension EventsBrowserViewController: StoreSubscriber {
+    func newState(state: EventsBrowserState) {
         
     }
 }

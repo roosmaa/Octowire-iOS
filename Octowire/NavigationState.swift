@@ -10,6 +10,6 @@ import Foundation
 import ReSwift
 
 struct NavigationState: StateType {
-    var animationCounter: UInt64
-    var stack: [Route]
+    var animationCounter: UInt64 = 0
+    var stack: [Route] = []
 }

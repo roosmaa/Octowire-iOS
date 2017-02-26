@@ -11,9 +11,7 @@ import ReSwift
 
 struct NavigationReducer: Reducer {
     func handleAction(action: Action, state: NavigationState?) -> NavigationState {
-        var state = state ?? NavigationState(
-            animationCounter: 0,
-            stack: [])
+        var state = state ?? NavigationState()
         
         switch action {
         case let a as NavigationActionStackPush:

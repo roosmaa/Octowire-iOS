@@ -36,7 +36,7 @@ enum Route: RawRepresentable {
         
         switch self {
         case .events:
-            let vc = storyboard.instantiateViewController(withIdentifier: "Events") as! EventsViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "EventsBrowser") as! EventsBrowserViewController
             vc.route = self
             return vc
             

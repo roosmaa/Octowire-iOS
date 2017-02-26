@@ -11,7 +11,7 @@ import ReSwift
 
 struct ToastReducer: Reducer {
     func handleAction(action: Action, state: ToastState?) -> ToastState {
-        var state = state ?? ToastState(visibleToasts: [])
+        var state = state ?? ToastState()
         
         switch action {
         case let a as ToastActionShow:

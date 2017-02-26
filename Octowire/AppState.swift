@@ -10,7 +10,7 @@ import Foundation
 import ReSwift
 
 struct AppState: StateType {
-    var toastState: ToastState
-    var navigationState: NavigationState
-    var eventsState: EventsState
+    var toastState = ToastState()
+    var navigationState = NavigationState()
+    var eventsBrowserState = EventsBrowserState()
 }

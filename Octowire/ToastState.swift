@@ -10,5 +10,5 @@ import Foundation
 import ReSwift
 
 struct ToastState: StateType {
-    var visibleToasts: [ToastModel]
+    var visibleToasts: [ToastModel] = []
 }
