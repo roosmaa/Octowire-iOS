@@ -26,6 +26,10 @@
 		C17056EC1E6102800050C15D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056EB1E6102800050C15D /* EventsViewController.swift */; };
 		C17056EE1E61028D0050C15D /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056ED1E61028D0050C15D /* UserProfileViewController.swift */; };
 		C17056F01E61C50B0050C15D /* ToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056EF1E61C50B0050C15D /* ToastController.swift */; };
+		C17056F21E623CBD0050C15D /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056F11E623CBD0050C15D /* EventModel.swift */; };
+		C17056F61E6244CF0050C15D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056F51E6244CF0050C15D /* UserModel.swift */; };
+		C17056F81E6246200050C15D /* UserModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056F71E6246200050C15D /* UserModelSpec.swift */; };
+		C17056FA1E6248D00050C15D /* EventModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056F91E6248D00050C15D /* EventModelSpec.swift */; };
 		C1B758341E6045900084D67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758331E6045900084D67E /* AppDelegate.swift */; };
 		C1B758361E6045900084D67E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* NavigationController.swift */; };
 		C1B758391E6045900084D67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B758371E6045900084D67E /* Main.storyboard */; };
@@ -75,6 +79,10 @@
 		C17056EB1E6102800050C15D /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		C17056ED1E61028D0050C15D /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		C17056EF1E61C50B0050C15D /* ToastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastController.swift; sourceTree = "<group>"; };
+		C17056F11E623CBD0050C15D /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		C17056F51E6244CF0050C15D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		C17056F71E6246200050C15D /* UserModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelSpec.swift; sourceTree = "<group>"; };
+		C17056F91E6248D00050C15D /* EventModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModelSpec.swift; sourceTree = "<group>"; };
 		C1B758301E6045900084D67E /* Octowire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octowire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758331E6045900084D67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B758351E6045900084D67E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -168,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				C120F3BA1E6098190025FC38 /* ToastModel.swift */,
+				C17056F11E623CBD0050C15D /* EventModel.swift */,
+				C17056F51E6244CF0050C15D /* UserModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -238,8 +248,10 @@
 			isa = PBXGroup;
 			children = (
 				C1B7584A1E6045900084D67E /* Info.plist */,
-				C120F3C51E60B6BC0025FC38 /* ToastStateSpec.swift */,
 				C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */,
+				C120F3C51E60B6BC0025FC38 /* ToastStateSpec.swift */,
+				C17056F71E6246200050C15D /* UserModelSpec.swift */,
+				C17056F91E6248D00050C15D /* EventModelSpec.swift */,
 			);
 			path = OctowireTests;
 			sourceTree = "<group>";
@@ -544,10 +556,12 @@
 				C120F3B61E6093B00025FC38 /* AppState.swift in Sources */,
 				C120F3CD1E60CB3B0025FC38 /* NavigationState.swift in Sources */,
 				C120F3C91E60CB120025FC38 /* EventsState.swift in Sources */,
+				C17056F21E623CBD0050C15D /* EventModel.swift in Sources */,
 				C17056EE1E61028D0050C15D /* UserProfileViewController.swift in Sources */,
 				C120F3CF1E60CC240025FC38 /* NavigationActions.swift in Sources */,
 				C1B758361E6045900084D67E /* NavigationController.swift in Sources */,
 				C120F3C31E60AA0F0025FC38 /* EventsReducer.swift in Sources */,
+				C17056F61E6244CF0050C15D /* UserModel.swift in Sources */,
 				C1B758341E6045900084D67E /* AppDelegate.swift in Sources */,
 				C120F3BB1E6098190025FC38 /* ToastModel.swift in Sources */,
 				C17056EC1E6102800050C15D /* EventsViewController.swift in Sources */,
@@ -559,6 +573,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C120F3D51E60E8A10025FC38 /* NavigationStateSpec.swift in Sources */,
+				C17056FA1E6248D00050C15D /* EventModelSpec.swift in Sources */,
+				C17056F81E6246200050C15D /* UserModelSpec.swift in Sources */,
 				C120F3C61E60B6BC0025FC38 /* ToastStateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
