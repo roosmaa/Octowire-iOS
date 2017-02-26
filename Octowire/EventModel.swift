@@ -31,7 +31,7 @@ class EventModel: StaticMappable {
         case "ForkEvent": return ForkEventModel()
         case "WatchEvent": return WatchEventModel()
         case "PullRequestEvent": return PullRequestEventModel()
-        default: return nil
+        default: return EventModel()
         }
     }
     

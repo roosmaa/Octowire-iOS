@@ -30,6 +30,8 @@
 		C17056F61E6244CF0050C15D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056F51E6244CF0050C15D /* UserModel.swift */; };
 		C17056F81E6246200050C15D /* UserModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056F71E6246200050C15D /* UserModelSpec.swift */; };
 		C17056FA1E6248D00050C15D /* EventModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056F91E6248D00050C15D /* EventModelSpec.swift */; };
+		C17056FC1E62FE9E0050C15D /* EventsBrowserActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056FB1E62FE9E0050C15D /* EventsBrowserActions.swift */; };
+		C17056FE1E63160B0050C15D /* EventsBrowserStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056FD1E63160B0050C15D /* EventsBrowserStateSpec.swift */; };
 		C1B758341E6045900084D67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758331E6045900084D67E /* AppDelegate.swift */; };
 		C1B758361E6045900084D67E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* NavigationController.swift */; };
 		C1B758391E6045900084D67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B758371E6045900084D67E /* Main.storyboard */; };
@@ -83,6 +85,8 @@
 		C17056F51E6244CF0050C15D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C17056F71E6246200050C15D /* UserModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelSpec.swift; sourceTree = "<group>"; };
 		C17056F91E6248D00050C15D /* EventModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModelSpec.swift; sourceTree = "<group>"; };
+		C17056FB1E62FE9E0050C15D /* EventsBrowserActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsBrowserActions.swift; sourceTree = "<group>"; };
+		C17056FD1E63160B0050C15D /* EventsBrowserStateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsBrowserStateSpec.swift; sourceTree = "<group>"; };
 		C1B758301E6045900084D67E /* Octowire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octowire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758331E6045900084D67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B758351E6045900084D67E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -155,8 +159,9 @@
 		C120F3B71E6094BC0025FC38 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				C120F3BC1E60985A0025FC38 /* ToastActions.swift */,
+				C17056FB1E62FE9E0050C15D /* EventsBrowserActions.swift */,
 				C120F3CE1E60CC240025FC38 /* NavigationActions.swift */,
+				C120F3BC1E60985A0025FC38 /* ToastActions.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				C17056F91E6248D00050C15D /* EventModelSpec.swift */,
+				C17056FD1E63160B0050C15D /* EventsBrowserStateSpec.swift */,
 				C1B7584A1E6045900084D67E /* Info.plist */,
 				C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */,
 				C120F3C51E60B6BC0025FC38 /* ToastStateSpec.swift */,
@@ -561,6 +567,7 @@
 				C120F3CF1E60CC240025FC38 /* NavigationActions.swift in Sources */,
 				C1B758361E6045900084D67E /* NavigationController.swift in Sources */,
 				C120F3C31E60AA0F0025FC38 /* EventsBrowserReducer.swift in Sources */,
+				C17056FC1E62FE9E0050C15D /* EventsBrowserActions.swift in Sources */,
 				C17056F61E6244CF0050C15D /* UserModel.swift in Sources */,
 				C1B758341E6045900084D67E /* AppDelegate.swift in Sources */,
 				C120F3BB1E6098190025FC38 /* ToastModel.swift in Sources */,
@@ -573,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C120F3D51E60E8A10025FC38 /* NavigationStateSpec.swift in Sources */,
+				C17056FE1E63160B0050C15D /* EventsBrowserStateSpec.swift in Sources */,
 				C17056FA1E6248D00050C15D /* EventModelSpec.swift in Sources */,
 				C17056F81E6246200050C15D /* UserModelSpec.swift in Sources */,
 				C120F3C61E60B6BC0025FC38 /* ToastStateSpec.swift in Sources */,

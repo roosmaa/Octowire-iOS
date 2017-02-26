@@ -20,8 +20,8 @@ struct EventsBrowserState: StateType {
     var scrollTopDistance: Float32 = 0
     var isRealtime: Bool = true
     
-    var isLoadingEvents: Bool = false
-    var preloadedEvents: [EventModel] = []
+    var isPreloadingEvents: Bool = false
+    var preloadedEvents: [(EventModel, eta: UInt16)] = []
     
     var activeFilters: [EventsFilter] = []
     var unfilteredEvents: [EventModel] = []
