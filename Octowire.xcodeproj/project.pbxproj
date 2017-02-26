@@ -247,11 +247,11 @@
 		C1B758471E6045900084D67E /* OctowireTests */ = {
 			isa = PBXGroup;
 			children = (
+				C17056F91E6248D00050C15D /* EventModelSpec.swift */,
 				C1B7584A1E6045900084D67E /* Info.plist */,
 				C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */,
 				C120F3C51E60B6BC0025FC38 /* ToastStateSpec.swift */,
 				C17056F71E6246200050C15D /* UserModelSpec.swift */,
-				C17056F91E6248D00050C15D /* EventModelSpec.swift */,
 			);
 			path = OctowireTests;
 			sourceTree = "<group>";

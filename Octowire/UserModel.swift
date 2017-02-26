@@ -12,23 +12,23 @@ import ObjectMapper
 class UserModel: Mappable {
     var id: Int64?
     var username: String?
-    var avatarUrl: String?
+    var avatarUrl: URL?
     var name: String?
     var bio: String?
     var location: String?
     var email: String?
-    var website: String?
+    var website: URL?
 
     required init?(map: Map) {}
     
     func mapping(map: Map) {
         self.id <- map["id"]
         self.username <- map["login"]
-        self.avatarUrl <- map["avatar_url"]
+        self.avatarUrl <- (map["avatar_url"], URLTransform())
         self.name <- map["name"]
         self.bio <- map["bio"]
         self.location <- map["location"]
         self.email <- map["email"]
-        self.website <- map["blog"]
+        self.website <- (map["blog"], URLTransform())
     }
 }

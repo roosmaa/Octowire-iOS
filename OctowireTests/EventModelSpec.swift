@@ -26,7 +26,7 @@ class EventModelSpec: QuickSpec {
                     expect(event.repoName).to(equal("happylance/ForecastIOClient"))
                     expect(event.actorId).to(equal(4953175))
                     expect(event.actorUsername).to(equal("happylance"))
-                    expect(event.actorAvatarUrl).to(equal("https://avatars.githubusercontent.com/u/4953175?"))
+                    expect(event.actorAvatarUrl).to(equal(URL(string: "https://avatars.githubusercontent.com/u/4953175?")!))
                     
                     expect(event.refType).to(equal(CreateEventModel.RefType.repository))
                 }
@@ -43,7 +43,7 @@ class EventModelSpec: QuickSpec {
                     expect(event.repoName).to(equal("Azure/azure-sdk-for-net"))
                     expect(event.actorId).to(equal(20732208))
                     expect(event.actorUsername).to(equal("shahabhijeet"))
-                    expect(event.actorAvatarUrl).to(equal("https://avatars.githubusercontent.com/u/20732208?"))
+                    expect(event.actorAvatarUrl).to(equal(URL(string: "https://avatars.githubusercontent.com/u/20732208?")!))
                     
                     expect(event.action).to(equal(PullRequestEventModel.ActionKind.opened))
                     expect(event.pullRequestNumber).to(equal(2861))
@@ -61,7 +61,7 @@ class EventModelSpec: QuickSpec {
                     expect(event.repoName).to(equal("infernojs/inferno"))
                     expect(event.actorId).to(equal(2153342))
                     expect(event.actorUsername).to(equal("chantron"))
-                    expect(event.actorAvatarUrl).to(equal("https://avatars.githubusercontent.com/u/2153342?"))
+                    expect(event.actorAvatarUrl).to(equal(URL(string: "https://avatars.githubusercontent.com/u/2153342?")!))
                 }
             }
             
@@ -76,7 +76,7 @@ class EventModelSpec: QuickSpec {
                     expect(event.repoName).to(equal("mekkablue/MakeCorner"))
                     expect(event.actorId).to(equal(1623538))
                     expect(event.actorUsername).to(equal("CNXTEoE"))
-                    expect(event.actorAvatarUrl).to(equal("https://avatars.githubusercontent.com/u/1623538?"))
+                    expect(event.actorAvatarUrl).to(equal(URL(string: "https://avatars.githubusercontent.com/u/1623538?")!))
 
                     expect(event.forkRepoName).to(equal("MakeCorner"))
                 }

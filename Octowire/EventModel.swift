@@ -19,7 +19,7 @@ class EventModel: StaticMappable {
 
     var actorId: Int64?
     var actorUsername: String?
-    var actorAvatarUrl: String?
+    var actorAvatarUrl: URL?
     
     static func objectForMapping(map: Map) -> BaseMappable? {
         guard let type: String = map["type"].value() else {
@@ -48,7 +48,7 @@ class EventModel: StaticMappable {
         
         self.actorId <- map["actor.id"]
         self.actorUsername <- map["actor.login"]
-        self.actorAvatarUrl <- map["actor.avatar_url"]
+        self.actorAvatarUrl <- (map["actor.avatar_url"], URLTransform())
     }
 }
 

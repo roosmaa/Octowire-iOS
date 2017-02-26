@@ -21,12 +21,12 @@ class UserModelSpec: QuickSpec {
             expect(user).toNot(beNil())
             expect(user?.id).to(equal(583231))
             expect(user?.username).to(equal("octocat"))
-            expect(user?.avatarUrl).to(equal("https://avatars.githubusercontent.com/u/583231?v=3"))
+            expect(user?.avatarUrl).to(equal(URL(string: "https://avatars.githubusercontent.com/u/583231?v=3")!))
             expect(user?.name).to(equal("The Octocat"))
             expect(user?.bio).to(beNil())
             expect(user?.location).to(equal("San Francisco"))
             expect(user?.email).to(equal("octocat@github.com"))
-            expect(user?.website).to(equal("http://www.github.com/blog"))
+            expect(user?.website).to(equal(URL(string: "http://www.github.com/blog")!))
         }
     }
 }
