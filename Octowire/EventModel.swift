@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import RxDataSources
 
 class EventModel: StaticMappable {
     var id: String!

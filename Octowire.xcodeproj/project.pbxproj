@@ -32,6 +32,7 @@
 		C17056FA1E6248D00050C15D /* EventModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056F91E6248D00050C15D /* EventModelSpec.swift */; };
 		C17056FC1E62FE9E0050C15D /* EventsBrowserActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056FB1E62FE9E0050C15D /* EventsBrowserActions.swift */; };
 		C17056FE1E63160B0050C15D /* EventsBrowserStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056FD1E63160B0050C15D /* EventsBrowserStateSpec.swift */; };
+		C17057001E638B370050C15D /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056FF1E638B370050C15D /* AppColor.swift */; };
 		C1B758341E6045900084D67E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758331E6045900084D67E /* AppDelegate.swift */; };
 		C1B758361E6045900084D67E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B758351E6045900084D67E /* NavigationController.swift */; };
 		C1B758391E6045900084D67E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1B758371E6045900084D67E /* Main.storyboard */; };
@@ -87,6 +88,7 @@
 		C17056F91E6248D00050C15D /* EventModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModelSpec.swift; sourceTree = "<group>"; };
 		C17056FB1E62FE9E0050C15D /* EventsBrowserActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsBrowserActions.swift; sourceTree = "<group>"; };
 		C17056FD1E63160B0050C15D /* EventsBrowserStateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsBrowserStateSpec.swift; sourceTree = "<group>"; };
+		C17056FF1E638B370050C15D /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		C1B758301E6045900084D67E /* Octowire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Octowire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1B758331E6045900084D67E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1B758351E6045900084D67E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				C120F3B71E6094BC0025FC38 /* Actions */,
 				C120F3B81E6094C40025FC38 /* Reducers */,
 				C120F3C41E60AECB0025FC38 /* ViewControllers */,
+				C17056FF1E638B370050C15D /* AppColor.swift */,
 				C1B758371E6045900084D67E /* Main.storyboard */,
 				C1B7583A1E6045900084D67E /* Assets.xcassets */,
 				C1B7583C1E6045900084D67E /* LaunchScreen.storyboard */,
@@ -556,6 +559,7 @@
 				C120F3D31E60DCEF0025FC38 /* Routes.swift in Sources */,
 				C120F3CB1E60CB2A0025FC38 /* ToastState.swift in Sources */,
 				C120F3BD1E60985A0025FC38 /* ToastActions.swift in Sources */,
+				C17057001E638B370050C15D /* AppColor.swift in Sources */,
 				C17056F01E61C50B0050C15D /* ToastController.swift in Sources */,
 				C120F3C11E60A9050025FC38 /* AppReducer.swift in Sources */,
 				C120F3D11E60CF880025FC38 /* NavigationReducer.swift in Sources */,

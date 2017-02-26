@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -56,20 +58,87 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-TP-YO2">
                                 <rect key="frame" x="0.0" y="64" width="320" height="439"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UHj-is-PMC">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="UHj-is-PMC">
+                                    <size key="itemSize" width="320" height="64"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nYe-1w-HpT">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="eventCell" id="nYe-1w-HpT" customClass="EventsViewEventCell" customModule="Octowire" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aqi-Sg-E9e">
+                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="aqi-Sg-E9e" secondAttribute="height" multiplier="1:1" id="N3h-kI-L0Q"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RepositoryIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jeF-Kl-WEQ">
+                                                    <rect key="frame" x="288" y="0.0" width="32" height="32"/>
+                                                    <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="duO-1j-0dD"/>
+                                                        <constraint firstAttribute="width" constant="32" id="gBc-5i-fjk"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="andyvitale created repository andyvitale/sketch-resources" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfK-6X-7ua">
+                                                    <rect key="frame" x="64" y="8" width="232" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jeF-Kl-WEQ" secondAttribute="trailing" id="3Hg-na-qHw"/>
+                                            <constraint firstItem="aqi-Sg-E9e" firstAttribute="leading" secondItem="nYe-1w-HpT" secondAttribute="leadingMargin" id="MsQ-Mq-z2A"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="CfK-6X-7ua" secondAttribute="bottom" id="Qol-MU-5PV"/>
+                                            <constraint firstItem="aqi-Sg-E9e" firstAttribute="bottom" secondItem="nYe-1w-HpT" secondAttribute="bottomMargin" id="buA-dC-ryz"/>
+                                            <constraint firstItem="aqi-Sg-E9e" firstAttribute="top" secondItem="nYe-1w-HpT" secondAttribute="topMargin" id="gq3-ZD-Ma9"/>
+                                            <constraint firstItem="jeF-Kl-WEQ" firstAttribute="top" secondItem="nYe-1w-HpT" secondAttribute="top" id="mDP-6J-OaA"/>
+                                            <constraint firstItem="CfK-6X-7ua" firstAttribute="top" secondItem="nYe-1w-HpT" secondAttribute="topMargin" id="q0p-BI-39Y"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="CfK-6X-7ua" secondAttribute="trailing" constant="16" id="qtK-l2-2nY"/>
+                                            <constraint firstItem="CfK-6X-7ua" firstAttribute="leading" secondItem="aqi-Sg-E9e" secondAttribute="trailing" constant="8" id="xoJ-hT-oTA"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="actorImage" destination="aqi-Sg-E9e" id="iOp-5G-ZkK"/>
+                                            <outlet property="iconImage" destination="jeF-Kl-WEQ" id="oru-Fc-K5Q"/>
+                                            <outlet property="summaryLabel" destination="CfK-6X-7ua" id="uty-4S-k9m"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="octocatCell" id="E50-CM-eLg" customClass="EventsViewOctocatCell" customModule="Octowire" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Octocat" translatesAutoresizingMaskIntoConstraints="NO" id="4xU-0N-SiS">
+                                                    <rect key="frame" x="141" y="8" width="38" height="38"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eavesdropping on GitHub…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMc-tb-ODi">
+                                                    <rect key="frame" x="72" y="54" width="176" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="TMc-tb-ODi" firstAttribute="top" secondItem="4xU-0N-SiS" secondAttribute="bottom" constant="8" id="HhH-b0-7ko"/>
+                                            <constraint firstItem="4xU-0N-SiS" firstAttribute="top" secondItem="E50-CM-eLg" secondAttribute="topMargin" id="dts-jj-wKk"/>
+                                            <constraint firstItem="TMc-tb-ODi" firstAttribute="centerX" secondItem="E50-CM-eLg" secondAttribute="centerX" id="fQj-uH-fiS"/>
+                                            <constraint firstItem="4xU-0N-SiS" firstAttribute="centerX" secondItem="E50-CM-eLg" secondAttribute="centerX" id="odm-Xm-Oua"/>
+                                        </constraints>
+                                        <size key="customSize" width="320" height="82"/>
+                                        <connections>
+                                            <outlet property="octocatImage" destination="4xU-0N-SiS" id="jpg-pH-dDE"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -89,6 +158,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="collectionView" destination="Sef-TP-YO2" id="EFt-0o-Wbr"/>
                         <outlet property="filterForkButton" destination="ubH-Ri-AfF" id="lTA-aJ-KpD"/>
                         <outlet property="filterPullRequestButton" destination="Cb3-Q4-Gz8" id="rYX-4i-Qsv"/>
                         <outlet property="filterRepoButton" destination="G99-6P-xZU" id="Yxd-fZ-B6R"/>
@@ -97,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-LO-ITC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909" y="104"/>
+            <point key="canvasLocation" x="-909.375" y="103.52112676056338"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="vpJ-HD-Q10">
@@ -121,6 +191,7 @@
     </scenes>
     <resources>
         <image name="ForkIcon" width="64" height="64"/>
+        <image name="Octocat" width="38" height="38"/>
         <image name="PullRequestIcon" width="64" height="64"/>
         <image name="RepositoryIcon" width="64" height="64"/>
         <image name="StarIcon" width="64" height="64"/>
