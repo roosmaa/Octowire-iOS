@@ -65,12 +65,21 @@ struct EventsBrowserReducer: Reducer {
         case let action as EventsBrowserActionEndPreloading:
             state.isPreloadingEvents = false
             
-            let etaAdjustment = (state.preloadedEvents.map({ $0.eta }).max() ?? 0) + 1
+            let etaAdjustment: Int
+            if state.unfilteredEvents.isEmpty && state.preloadedEvents.isEmpty {
+                // For initial load adjust event ETAs in a way that delivers first
+                // event as soon as possible
+                etaAdjustment = 1 - (action.preloadedEvents.map({ Int($0.eta) }).min() ?? 0)
+            } else {
+                // For consecutive loads, adjust ETAs so that they would respect
+                // the already preloaded events
+                etaAdjustment = (state.preloadedEvents.map({ Int($0.eta) }).max() ?? 0) + 1
+            }
             
             var preloadedEvents: [(EventModel, eta: UInt16)] = []
             preloadedEvents.reserveCapacity(action.preloadedEvents.count + state.preloadedEvents.count)
             preloadedEvents.append(contentsOf: action.preloadedEvents
-                .map({ ($0.0, eta: $0.eta + etaAdjustment) }))
+                .map({ ($0.0, eta: UInt16(Int($0.eta) + etaAdjustment)) }))
             preloadedEvents.append(contentsOf: state.preloadedEvents)
             
             state.preloadedEvents = preloadedEvents

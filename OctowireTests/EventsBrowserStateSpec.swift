@@ -19,17 +19,17 @@ class EventsBrowserStateSpec: QuickSpec {
                 reducer: EventsBrowserReducer(unfilteredEventsCapacity: 2),
                 state: nil)
             
-            it("begin preloading") {
+            it("begins initial preloading") {
                 store.dispatch(EventsBrowserActionBeginPreloading())
                 expect(store.state.isPreloadingEvents).to(equal(true))
             }
             
-            it("end preloading") {
+            it("ends initial preloading") {
                 store.dispatch(EventsBrowserActionEndPreloading(preloadedEvents: [
-                    (PullRequestEventModel(), eta: 4),
-                    (CreateEventModel(), eta: 3),
-                    (ForkEventModel(), eta: 1),
-                    (WatchEventModel(), eta: 0)]))
+                    (PullRequestEventModel(), eta: 8),
+                    (CreateEventModel(), eta: 7),
+                    (ForkEventModel(), eta: 5),
+                    (WatchEventModel(), eta: 4)]))
                 expect(store.state.isPreloadingEvents).to(equal(false))
                 expect(store.state.preloadedEvents.map({ $0.eta })).to(equal([5, 4, 2, 1]))
             }
@@ -82,6 +82,20 @@ class EventsBrowserStateSpec: QuickSpec {
                 expect(store.state.filteredEvents).to(haveCount(0))
                 expect(store.state.unfilteredEvents).to(haveCount(2))
             }
+            
+            it("begins another preloading") {
+                store.dispatch(EventsBrowserActionBeginPreloading())
+                expect(store.state.isPreloadingEvents).to(equal(true))
+            }
+            
+            it("ends another preloading") {
+                store.dispatch(EventsBrowserActionEndPreloading(preloadedEvents: [
+                    (ForkEventModel(), eta: 5),
+                    (WatchEventModel(), eta: 4)]))
+                expect(store.state.isPreloadingEvents).to(equal(false))
+                expect(store.state.preloadedEvents.map({ $0.eta })).to(equal([6, 5]))
+            }
+
         }
         
         describe("action creaters") {
