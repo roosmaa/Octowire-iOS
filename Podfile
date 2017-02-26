@@ -6,6 +6,7 @@ target 'Octowire' do
   pod 'ReSwift',               '~> 3.0'
   pod 'RxSwift',               '~> 3.0'
   pod 'RxCocoa',               '~> 3.0'
+  pod 'RxDataSources',         '~> 1.0'
   pod 'ObjectMapper',          '~> 2.2'
   pod 'Alamofire',             '~> 4.3'
   pod 'AlamofireObjectMapper', '~> 4.0'
