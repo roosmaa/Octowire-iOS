@@ -69,6 +69,28 @@ class EventsBrowserViewController: UIViewController {
             .disposed(by: self.disposeBag)
         self.collectionView.delegate = self
         
+        // Hook up row tap action
+        self.collectionView.rx.itemSelected.asObservable()
+            .subscribe { ev in
+                guard let indexPath = ev.element else {
+                    return
+                }
+                
+                switch self.dataSource[indexPath] {
+                case .event(let event):
+                    guard let actorUsername = event.actorUsername else {
+                        break
+                    }
+                    
+                    mainStore.dispatch(NavigationActionStackPush(
+                        route: .userProfile(username: actorUsername)))
+                    
+                case .octocat:
+                    break
+                }
+            }
+            .disposed(by: self.disposeBag)
+        
         // Hook up filter buttons to generate active filter update actions
         Observable.of(
             self.filterRepoButton.rx.tap.map({ EventsFilter.repoEvents }),

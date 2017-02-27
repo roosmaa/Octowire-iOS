@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GitHub activity-->
+        <!--Activity-->
         <scene sceneID="loL-Hc-VLc">
             <objects>
-                <viewController storyboardIdentifier="EventsBrowser" title="GitHub activity" id="rpn-WI-VbW" customClass="EventsBrowserViewController" customModule="Octowire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsBrowser" title="Activity" id="rpn-WI-VbW" customClass="EventsBrowserViewController" customModule="Octowire" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O33-g4-gsI"/>
                         <viewControllerLayoutGuide type="bottom" id="F9e-qt-7c5"/>
