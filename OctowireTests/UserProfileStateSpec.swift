@@ -74,7 +74,7 @@ class UserProfileStateSpec: QuickSpec {
             }
         }
         
-        describe("action creaters") {
+        xdescribe("action creaters") {
             let store = Store<AppState>(
                 reducer: AppReducer(),
                 state: nil)
