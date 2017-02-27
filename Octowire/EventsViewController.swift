@@ -55,6 +55,8 @@ class EventsBrowserViewController: UIViewController {
     fileprivate let dataSource = RxCollectionViewSectionedAnimatedDataSource<RowModel>();
     fileprivate let disposeBag = DisposeBag()
     fileprivate let rows = Variable<[Row]>([])
+    fileprivate let scrollTopDistance = Variable<Float32>(0.0)
+    private var scrollSyncInitialised = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +68,7 @@ class EventsBrowserViewController: UIViewController {
             .bindTo(self.collectionView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.disposeBag)
         self.collectionView.delegate = self
-
+        
         // Hook up filter buttons to generate active filter update actions
         Observable.of(
             self.filterRepoButton.rx.tap.map({ EventsFilter.repoEvents }),
@@ -89,6 +91,34 @@ class EventsBrowserViewController: UIViewController {
                 mainStore.dispatch(EventsBrowserActionUpdateActiveFilters(to: activeFilters))
             }
             .disposed(by: self.disposeBag)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Wait for UICollectionView to have populated with cells before
+        // enabling scroll position sync. Otherwise, UICollectionView
+        // will emit a new scroll position as the views are displayed.
+        if self.rows.value.count > 0 && !self.scrollSyncInitialised {
+            self.scrollSyncInitialised = true
+            
+            self.scrollTopDistance.asObservable()
+                .map({ CGPoint(x: 0, y: CGFloat($0)) })
+                .filter({ self.collectionView.contentOffset != $0 })
+                .bindTo(self.collectionView.rx.contentOffset)
+                .disposed(by: self.disposeBag)
+            
+            self.collectionView.rx.contentOffset.asObservable()
+                .map({ Float32($0.y) })
+                .filter({
+                    self.scrollTopDistance.value != $0
+                })
+                .subscribe { ev in
+                    let topDistance = ev.element ?? 0
+                    mainStore.dispatch(EventsBrowserActionUpdateScrollTopDistance(to: topDistance))
+                }
+                .disposed(by: self.disposeBag)
+        }
     }
     
     private func cellFactory(dataSource: CollectionViewSectionedDataSource<RowModel>,
@@ -122,7 +152,7 @@ class EventsBrowserViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         mainStore.unsubscribe(self)
         mainStore.dispatch(EventsBrowserActionUpdateIsVisible(to: false))
-
+        
         super.viewWillDisappear(animated)
     }
 }
@@ -130,7 +160,8 @@ class EventsBrowserViewController: UIViewController {
 extension EventsBrowserViewController: StoreSubscriber {
     func newState(state: EventsBrowserState) {
         rows.value = state.filteredEvents.map({ .event($0) }) + [.octocat]
-
+        scrollTopDistance.value = state.scrollTopDistance
+        
         configureFilterButton(self.filterRepoButton, filter: .repoEvents, state: state)
         configureFilterButton(self.filterStarButton, filter: .starEvents, state: state)
         configureFilterButton(self.filterForkButton, filter: .forkEvents, state: state)
