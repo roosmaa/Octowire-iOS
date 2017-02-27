@@ -30,10 +30,21 @@ class UserProfileViewController: UIViewController {
         self.nameLabel.isHidden = true
         self.usernameLabel.isHidden = true
         self.bioLabel.isHidden = true
-        self.locationRow.isHidden = true
-        self.emailRow.isHidden = true
-        self.websiteRow.isHidden = true
+        setRowIsHidden(self.locationRow, to: true)
+        setRowIsHidden(self.emailRow, to: true)
+        setRowIsHidden(self.websiteRow, to: true)
         
         self.title = self.username
+    }
+    
+    private func setRowIsHidden(_ row: UIView, to isHidden: Bool) {
+        row.isHidden = isHidden
+        // To avoid weird constraint warnings, we need to also zero out the
+        // layoutMargins of the row.
+        if isHidden {
+            row.layoutMargins = UIEdgeInsets.zero
+        } else {
+            row.layoutMargins = UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8)
+        }
     }
 }

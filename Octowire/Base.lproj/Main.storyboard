@@ -256,8 +256,8 @@
                                                 <rect key="frame" x="8" y="5" width="32" height="32"/>
                                                 <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="32" id="RlN-MB-SGl"/>
-                                                    <constraint firstAttribute="width" constant="32" id="T2u-h6-S8m"/>
+                                                    <constraint firstAttribute="height" priority="999" constant="32" id="RlN-MB-SGl"/>
+                                                    <constraint firstAttribute="width" priority="999" constant="32" id="T2u-h6-S8m"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Somewhere in Europe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIr-GE-zWg">
@@ -276,8 +276,8 @@
                                                 <rect key="frame" x="8" y="5" width="32" height="32"/>
                                                 <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="32" id="0Se-Zc-2NF"/>
-                                                    <constraint firstAttribute="width" constant="32" id="bqo-Ab-Vhw"/>
+                                                    <constraint firstAttribute="height" priority="999" constant="32" id="0Se-Zc-2NF"/>
+                                                    <constraint firstAttribute="width" priority="999" constant="32" id="bqo-Ab-Vhw"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name@example.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3A-1G-TCA">
@@ -296,8 +296,8 @@
                                                 <rect key="frame" x="8" y="5" width="32" height="32"/>
                                                 <color key="tintColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="32" id="QKY-EI-aJ2"/>
-                                                    <constraint firstAttribute="width" constant="32" id="rZL-BI-H6i"/>
+                                                    <constraint firstAttribute="height" priority="999" constant="32" id="QKY-EI-aJ2"/>
+                                                    <constraint firstAttribute="width" priority="999" constant="32" id="rZL-BI-H6i"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.example.com/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8t-td-igC">
@@ -311,8 +311,8 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="yOf-GC-eQ4" firstAttribute="width" secondItem="ptl-ax-spZ" secondAttribute="width" id="Dc3-lk-P3k"/>
-                                    <constraint firstItem="qr0-Yz-LJS" firstAttribute="width" secondItem="ptl-ax-spZ" secondAttribute="width" id="KbW-uC-aes"/>
+                                    <constraint firstItem="yOf-GC-eQ4" firstAttribute="width" secondItem="ptl-ax-spZ" secondAttribute="width" priority="999" id="Dc3-lk-P3k"/>
+                                    <constraint firstItem="qr0-Yz-LJS" firstAttribute="width" secondItem="ptl-ax-spZ" secondAttribute="width" priority="999" id="KbW-uC-aes"/>
                                 </constraints>
                             </stackView>
                         </subviews>
