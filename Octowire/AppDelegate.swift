@@ -11,7 +11,7 @@ import ReSwift
 import ReSwiftRecorder
 import RxSwift
 
-var mainStore = RecordingMainStore<AppState>(
+let mainStore: Store<AppState> = createStore(
     reducer: AppReducer(),
     state: nil,
     typeMaps: [
@@ -20,7 +20,6 @@ var mainStore = RecordingMainStore<AppState>(
         navigationActionTypeMap,
         toastActionTypeMap
     ],
-    recording: "recording.json",
     middleware: [])
 
 @UIApplicationMain
@@ -46,14 +45,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
         
-        mainStore.rewindControlYOffset = 150
-        mainStore.window = window
+        if let recordingStore = mainStore as? RecordingMainStore<AppState> {
+            recordingStore.rewindControlYOffset = 150
+            recordingStore.window = window
+        }
         
         // Setup automatic event polling
         _ = Observable<Int>.timer(0, period: 2.05, scheduler: MainScheduler.instance)
             .subscribe({ _ in mainStore.dispatch(loadNextEvent()) })
         
         return true
+    }
+}
+
+private func createStore<State>(reducer: AnyReducer,
+                         state: State?,
+                         typeMaps: [TypeMap],
+                         middleware: [Middleware]) -> Store<State> {
+    let env = ProcessInfo.processInfo.environment
+    
+    if env["ENABLE_TIME_TRAVEL"] != nil {
+        return RecordingMainStore<State>(
+            reducer: reducer,
+            state: state,
+            typeMaps: typeMaps,
+            recording: "recording.json",
+            middleware: middleware)
+    } else {
+        return Store<State>(reducer: reducer,
+                            state: state,
+                            middleware: middleware)
     }
 }
 
