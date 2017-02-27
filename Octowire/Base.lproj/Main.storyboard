@@ -111,8 +111,43 @@
                                             <outlet property="summaryLabel" destination="CfK-6X-7ua" id="uty-4S-k9m"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="thatsAllCell" id="iQX-wq-Eyl" customClass="EventsViewThatsAllCell" customModule="Octowire" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JTU-T0-tUw">
+                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="JTU-T0-tUw" secondAttribute="height" multiplier="1:1" id="meY-uR-nsN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="roosmaa said “That’s all folks! 😎”" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8z-ge-0eh">
+                                                    <rect key="frame" x="64" y="8" width="232" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="JTU-T0-tUw" firstAttribute="bottom" secondItem="iQX-wq-Eyl" secondAttribute="bottomMargin" id="IQn-6u-0uP"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="X8z-ge-0eh" secondAttribute="bottom" id="boO-ig-mme"/>
+                                            <constraint firstItem="JTU-T0-tUw" firstAttribute="leading" secondItem="iQX-wq-Eyl" secondAttribute="leadingMargin" id="c0p-2r-IM8"/>
+                                            <constraint firstItem="X8z-ge-0eh" firstAttribute="leading" secondItem="JTU-T0-tUw" secondAttribute="trailing" constant="8" id="eNW-q0-miu"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="X8z-ge-0eh" secondAttribute="trailing" constant="16" id="gHi-5v-Qgr"/>
+                                            <constraint firstItem="JTU-T0-tUw" firstAttribute="top" secondItem="iQX-wq-Eyl" secondAttribute="topMargin" id="kcD-ca-PP2"/>
+                                            <constraint firstItem="X8z-ge-0eh" firstAttribute="top" secondItem="iQX-wq-Eyl" secondAttribute="topMargin" id="xhY-Mh-DD8"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="actorImage" destination="JTU-T0-tUw" id="g7b-Sj-n3D"/>
+                                            <outlet property="summaryLabel" destination="X8z-ge-0eh" id="8Ez-hh-yxc"/>
+                                        </connections>
+                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="octocatCell" id="E50-CM-eLg" customClass="EventsViewOctocatCell" customModule="Octowire" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="82"/>
+                                        <rect key="frame" x="0.0" y="128" width="320" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>

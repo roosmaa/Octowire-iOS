@@ -16,6 +16,7 @@ import Kingfisher
 private enum Row {
     case event(EventModel)
     case octocat
+    case thatsAll
 }
 
 extension Row: IdentifiableType {
@@ -23,6 +24,7 @@ extension Row: IdentifiableType {
         switch self {
         case .event(let ev): return "event-\(ev.id)"
         case .octocat: return "octocat"
+        case .thatsAll: return "thatsAll"
         }
     }
 }
@@ -36,6 +38,10 @@ extension Row: Equatable {
             }
         case .octocat:
             if case .octocat = rhs {
+                return true
+            }
+        case .thatsAll:
+            if case .thatsAll = rhs {
                 return true
             }
         }
@@ -87,6 +93,10 @@ class EventsBrowserViewController: UIViewController {
                     
                 case .octocat:
                     break
+                    
+                case .thatsAll:
+                    mainStore.dispatch(NavigationActionStackPush(
+                        route: .userProfile(username: "roosmaa")))
                 }
             }
             .disposed(by: self.disposeBag)
@@ -156,6 +166,9 @@ class EventsBrowserViewController: UIViewController {
             
         case .octocat:
             return collectionView.dequeueReusableCell(withReuseIdentifier: "octocatCell", for: indexPath)
+            
+        case .thatsAll:
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "thatsAllCell", for: indexPath)
         }
     }
     
@@ -181,7 +194,14 @@ class EventsBrowserViewController: UIViewController {
 
 extension EventsBrowserViewController: StoreSubscriber {
     func newState(state: EventsBrowserState) {
-        rows.value = state.filteredEvents.map({ .event($0) }) + [.octocat]
+        let extraRows: [Row]
+        if state.filteredEvents.count > 15 {
+            extraRows = [.thatsAll]
+        } else {
+            extraRows = [.octocat]
+        }
+        
+        rows.value = state.filteredEvents.map({ .event($0) }) + extraRows
         scrollTopDistance.value = state.scrollTopDistance
         
         configureFilterButton(self.filterRepoButton, filter: .repoEvents, state: state)
@@ -208,6 +228,7 @@ extension EventsBrowserViewController: UICollectionViewDelegateFlowLayout {
         
         switch self.dataSource[indexPath] {
         case .event(_): return CGSize(width: maxWidth, height: 64)
+        case .thatsAll: return CGSize(width: maxWidth, height: 64)
         case .octocat: return CGSize(width: maxWidth, height: 82)
         }
     }
@@ -293,6 +314,46 @@ class EventsViewEventCell: UICollectionViewCell {
         }
         
         self.iconImage.image = eventIcon
+        self.summaryLabel.attributedText = summaryText.reduce(NSMutableAttributedString()) { s, part in
+            s.append(NSAttributedString(string: part.0, attributes: part.attributes))
+            return s
+        }
+    }
+}
+
+class EventsViewThatsAllCell: UICollectionViewCell {
+    @IBOutlet weak var actorImage: UIImageView!
+    @IBOutlet weak var summaryLabel: UILabel!
+
+    override func awakeFromNib() {
+        self.actorImage.layer.cornerRadius = 10.0
+        
+        reset()
+    }
+    
+    override func prepareForReuse() {
+        reset()
+    }
+    
+    private func reset() {
+        self.actorImage.kf
+            .setImage(with: URL(string: "https://avatars.githubusercontent.com/u/65596")!,
+                      placeholder: #imageLiteral(resourceName: "AvatarPlaceholder"),
+                      options: [],
+                      progressBlock: nil,
+                      completionHandler: nil)
+        
+        let boldSystemFont = UIFont.boldSystemFont(ofSize: summaryLabel.font.pointSize)
+        let italicSystemFont = UIFont.italicSystemFont(ofSize: summaryLabel.font.pointSize)
+
+        let summaryText = [
+            ("roosmaa", attributes: [
+                NSFontAttributeName: boldSystemFont]),
+            (" said “", attributes: [:]),
+            ("That’s all folks! 😎", attributes: [
+                NSFontAttributeName: italicSystemFont]),
+            ("”", attributes: [:])]
+
         self.summaryLabel.attributedText = summaryText.reduce(NSMutableAttributedString()) { s, part in
             s.append(NSAttributedString(string: part.0, attributes: part.attributes))
             return s
