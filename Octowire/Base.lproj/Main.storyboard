@@ -246,7 +246,7 @@
                                     <constraint firstAttribute="height" constant="1" id="mpa-2e-Tv3"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gLr-Co-obb">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gLr-Co-obb">
                                 <rect key="frame" x="0.0" y="442" width="320" height="126"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ptl-ax-spZ">
