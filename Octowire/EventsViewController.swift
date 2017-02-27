@@ -261,6 +261,35 @@ class EventsViewOctocatCell: UICollectionViewCell {
     }
     
     private func reset() {
-        // TODO: Animate octocat
+        // Animate octocat doing the shake
+        let easeIn = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        let easeOut = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        let shakeStartDelay = 0.3
+        let shakeDuration = 0.3
+        let shakeEndDelay = 1.2
+        
+        let animLeftShake = CABasicAnimation(keyPath: "transform.rotation")
+        animLeftShake.fromValue = 0
+        animLeftShake.toValue = M_PI / 16
+        animLeftShake.beginTime = shakeStartDelay
+        animLeftShake.duration = shakeDuration / 4
+        animLeftShake.autoreverses = true
+        animLeftShake.timingFunction = easeIn
+        
+        let animRightShake = CABasicAnimation(keyPath: "transform.rotation")
+        animRightShake.fromValue = 0
+        animRightShake.toValue = -M_PI / 16
+        animRightShake.beginTime = shakeStartDelay + shakeDuration / 2
+        animRightShake.duration = shakeDuration / 4
+        animRightShake.autoreverses = true
+        animRightShake.timingFunction = easeOut
+        
+        let animGroup = CAAnimationGroup()
+        animGroup.duration = shakeStartDelay + shakeDuration + shakeEndDelay
+        animGroup.repeatCount = .infinity
+        animGroup.animations = [animLeftShake, animRightShake]
+        
+        octocatImage.layer.add(animGroup, forKey: "octoShake")
     }
 }
