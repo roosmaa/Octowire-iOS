@@ -17,8 +17,8 @@ enum EventsFilter {
 }
 
 struct EventsBrowserState: StateType {
+    var isVisible: Bool = false
     var scrollTopDistance: Float32 = 0
-    var isRealtime: Bool = true
     
     var isPreloadingEvents: Bool = false
     var preloadedEvents: [(EventModel, eta: UInt16)] = []

@@ -9,6 +9,7 @@
 import UIKit
 import ReSwift
 import ReSwiftRecorder
+import RxSwift
 
 var mainStore = RecordingMainStore<AppState>(
     reducer: AppReducer(),
@@ -46,6 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         mainStore.rewindControlYOffset = 150
         mainStore.window = window
+        
+        // Setup automatic event polling
+        _ = Observable<Int>.timer(0, period: 2.05, scheduler: MainScheduler.instance)
+            .subscribe({ _ in mainStore.dispatch(loadNextEvent()) })
         
         return true
     }

@@ -22,7 +22,9 @@ struct EventsBrowserReducer: Reducer {
         switch action {
         case let action as EventsBrowserActionUpdateScrollTopDistance:
             state.scrollTopDistance = max(0, action.distance)
-            state.isRealtime = state.scrollTopDistance <= 0
+            
+        case let action as EventsBrowserActionUpdateIsVisible:
+            state.isVisible = action.isVisible
             
         case let action as EventsBrowserActionUpdateActiveFilters:
             state.activeFilters = action.filters

@@ -14,6 +14,7 @@ import AlamofireObjectMapper
 
 let eventsBrowserActionTypeMap: TypeMap = [
     EventsBrowserActionUpdateScrollTopDistance.type: EventsBrowserActionUpdateScrollTopDistance.self,
+    EventsBrowserActionUpdateIsVisible.type: EventsBrowserActionUpdateIsVisible.self,
     EventsBrowserActionUpdateActiveFilters.type: EventsBrowserActionUpdateActiveFilters.self,
     EventsBrowserActionRevealPreloaded.type: EventsBrowserActionRevealPreloaded.self,
     EventsBrowserActionBeginPreloading.type: EventsBrowserActionBeginPreloading.self,
@@ -37,6 +38,28 @@ struct EventsBrowserActionUpdateScrollTopDistance: StandardActionConvertible {
             type: EventsBrowserActionUpdateScrollTopDistance.type,
             payload: [
                 "distance": self.distance as AnyObject],
+            isTypedAction: true)
+    }
+}
+
+struct EventsBrowserActionUpdateIsVisible: StandardActionConvertible {
+    static let type = "EVENTS_BROWSER_ACTION_UPDATE_IS_VISIBLE"
+    
+    let isVisible: Bool
+    
+    init(to isVisible: Bool) {
+        self.isVisible = isVisible
+    }
+    
+    init(_ standardAction: StandardAction) {
+        self.isVisible = standardAction.payload!["isVisible"] as! Bool
+    }
+    
+    func toStandardAction() -> StandardAction {
+        return StandardAction(
+            type: EventsBrowserActionUpdateIsVisible.type,
+            payload: [
+                "isVisible": self.isVisible as AnyObject],
             isTypedAction: true)
     }
 }
@@ -121,7 +144,7 @@ func loadNextEvent() -> Store<AppState>.ActionCreator {
     return { state, store in
         let state = state.eventsBrowserState
         
-        guard state.isRealtime else {
+        guard state.isVisible && state.scrollTopDistance < 1 else {
             return nil
         }
         store.dispatch(EventsBrowserActionRevealPreloaded())
@@ -147,7 +170,7 @@ func loadNextEvent() -> Store<AppState>.ActionCreator {
                                     
                                 case let ev as PullRequestEventModel:
                                     return ev.action == .opened
-
+                                    
                                 case _ as WatchEventModel: return true
                                 case _ as ForkEventModel: return true
                                 default: return false

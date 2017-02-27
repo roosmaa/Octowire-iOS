@@ -63,12 +63,18 @@ class EventsBrowserStateSpec: QuickSpec {
             
             it("updates scroll top distance") {
                 store.dispatch(EventsBrowserActionUpdateScrollTopDistance(to: 100))
-                expect(store.state.isRealtime).to(equal(false))
                 expect(store.state.scrollTopDistance).to(equal(100))
                 
                 store.dispatch(EventsBrowserActionUpdateScrollTopDistance(to: -1))
-                expect(store.state.isRealtime).to(equal(true))
                 expect(store.state.scrollTopDistance).to(equal(0))
+            }
+            
+            it("updates is visible") {
+                store.dispatch(EventsBrowserActionUpdateIsVisible(to: true))
+                expect(store.state.isVisible).to(equal(true))
+                
+                store.dispatch(EventsBrowserActionUpdateIsVisible(to: false))
+                expect(store.state.isVisible).to(equal(false))
             }
             
             it("filters results") {
@@ -95,7 +101,7 @@ class EventsBrowserStateSpec: QuickSpec {
                 expect(store.state.isPreloadingEvents).to(equal(false))
                 expect(store.state.preloadedEvents.map({ $0.eta })).to(equal([6, 5]))
             }
-
+            
         }
         
         describe("action creaters") {
@@ -103,10 +109,29 @@ class EventsBrowserStateSpec: QuickSpec {
                 reducer: AppReducer(),
                 state: nil)
             
-            it("loads events") {
+            it("doesn't load events when hidden") {
+                store.dispatch(EventsBrowserActionUpdateIsVisible(to: false))
+                store.dispatch(EventsBrowserActionUpdateScrollTopDistance(to: 0))
                 store.dispatch(loadNextEvent())
-                expect(store.state.eventsBrowserState.isPreloadingEvents).to(be(true))
-                expect(store.state.eventsBrowserState.isPreloadingEvents).toEventually(be(false), timeout: 5)
+                
+                expect(store.state.eventsBrowserState.isPreloadingEvents).to(equal(false))
+            }
+            
+            it("doesn't load events when scrolled") {
+                store.dispatch(EventsBrowserActionUpdateIsVisible(to: true))
+                store.dispatch(EventsBrowserActionUpdateScrollTopDistance(to: 100))
+                store.dispatch(loadNextEvent())
+                
+                expect(store.state.eventsBrowserState.isPreloadingEvents).to(equal(false))
+            }
+            
+            it("loads events") {
+                store.dispatch(EventsBrowserActionUpdateIsVisible(to: true))
+                store.dispatch(EventsBrowserActionUpdateScrollTopDistance(to: 0))
+                store.dispatch(loadNextEvent())
+                
+                expect(store.state.eventsBrowserState.isPreloadingEvents).to(equal(true))
+                expect(store.state.eventsBrowserState.isPreloadingEvents).toEventually(equal(false), timeout: 5)
             }
         }
     }

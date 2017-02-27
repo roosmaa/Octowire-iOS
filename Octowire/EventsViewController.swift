@@ -53,8 +53,7 @@ class EventsBrowserViewController: UIViewController {
     @IBOutlet weak var filterForkButton: UIButton!
     
     fileprivate let dataSource = RxCollectionViewSectionedAnimatedDataSource<RowModel>();
-    fileprivate let disposeBagDealloc = DisposeBag()
-    fileprivate var disposeBagDisappear = DisposeBag()
+    fileprivate let disposeBag = DisposeBag()
     fileprivate let rows = Variable<[Row]>([])
     
     override func viewDidLoad() {
@@ -65,7 +64,7 @@ class EventsBrowserViewController: UIViewController {
         self.rows.asObservable()
             .map({ rows in [RowModel(model: "", items: rows)] })
             .bindTo(self.collectionView.rx.items(dataSource: self.dataSource))
-            .disposed(by: self.disposeBagDealloc)
+            .disposed(by: self.disposeBag)
         self.collectionView.delegate = self
 
         // Hook up filter buttons to generate active filter update actions
@@ -89,7 +88,7 @@ class EventsBrowserViewController: UIViewController {
                 
                 mainStore.dispatch(EventsBrowserActionUpdateActiveFilters(to: activeFilters))
             }
-            .disposed(by: disposeBagDealloc)
+            .disposed(by: self.disposeBag)
     }
     
     private func cellFactory(dataSource: CollectionViewSectionedDataSource<RowModel>,
@@ -117,17 +116,13 @@ class EventsBrowserViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Setup automatic event loader
-        Observable<Int>.timer(0, period: 2.05, scheduler: MainScheduler.instance)
-            .subscribe({ _ in mainStore.dispatch(loadNextEvent()) })
-            .disposed(by: disposeBagDisappear)
+        mainStore.dispatch(EventsBrowserActionUpdateIsVisible(to: true))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        // Dispose resources that shouldn't be active when view isn't visible
-        self.disposeBagDisappear = DisposeBag()
-        
         mainStore.unsubscribe(self)
+        mainStore.dispatch(EventsBrowserActionUpdateIsVisible(to: false))
+
         super.viewWillDisappear(animated)
     }
 }
