@@ -19,6 +19,7 @@ class UserModel: Mappable {
     var email: String?
     var website: URL?
 
+    init() {}
     required init?(map: Map) {}
     
     func mapping(map: Map) {

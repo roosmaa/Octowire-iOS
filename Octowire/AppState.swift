@@ -13,4 +13,5 @@ struct AppState: StateType {
     var toastState = ToastState()
     var navigationState = NavigationState()
     var eventsBrowserState = EventsBrowserState()
+    var userProfileState = UserProfileState()
 }

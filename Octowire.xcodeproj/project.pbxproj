@@ -23,6 +23,10 @@
 		C120F3D11E60CF880025FC38 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3D01E60CF880025FC38 /* NavigationReducer.swift */; };
 		C120F3D31E60DCEF0025FC38 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3D21E60DCEF0025FC38 /* Routes.swift */; };
 		C120F3D51E60E8A10025FC38 /* NavigationStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */; };
+		C12A9A601E647BC00069C5B2 /* UserProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A9A5F1E647BC00069C5B2 /* UserProfileState.swift */; };
+		C12A9A621E647C890069C5B2 /* UserProfileReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A9A611E647C890069C5B2 /* UserProfileReducer.swift */; };
+		C12A9A641E647E3A0069C5B2 /* UserProfileActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A9A631E647E3A0069C5B2 /* UserProfileActions.swift */; };
+		C12A9A661E6482A80069C5B2 /* UserProfileStateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12A9A651E6482A80069C5B2 /* UserProfileStateSpec.swift */; };
 		C17056EC1E6102800050C15D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056EB1E6102800050C15D /* EventsViewController.swift */; };
 		C17056EE1E61028D0050C15D /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056ED1E61028D0050C15D /* UserProfileViewController.swift */; };
 		C17056F01E61C50B0050C15D /* ToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17056EF1E61C50B0050C15D /* ToastController.swift */; };
@@ -79,6 +83,10 @@
 		C120F3D01E60CF880025FC38 /* NavigationReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
 		C120F3D21E60DCEF0025FC38 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationStateSpec.swift; sourceTree = "<group>"; };
+		C12A9A5F1E647BC00069C5B2 /* UserProfileState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileState.swift; sourceTree = "<group>"; };
+		C12A9A611E647C890069C5B2 /* UserProfileReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileReducer.swift; sourceTree = "<group>"; };
+		C12A9A631E647E3A0069C5B2 /* UserProfileActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileActions.swift; sourceTree = "<group>"; };
+		C12A9A651E6482A80069C5B2 /* UserProfileStateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileStateSpec.swift; sourceTree = "<group>"; };
 		C17056EB1E6102800050C15D /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		C17056ED1E61028D0050C15D /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		C17056EF1E61C50B0050C15D /* ToastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastController.swift; sourceTree = "<group>"; };
@@ -164,6 +172,7 @@
 				C17056FB1E62FE9E0050C15D /* EventsBrowserActions.swift */,
 				C120F3CE1E60CC240025FC38 /* NavigationActions.swift */,
 				C120F3BC1E60985A0025FC38 /* ToastActions.swift */,
+				C12A9A631E647E3A0069C5B2 /* UserProfileActions.swift */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -173,8 +182,9 @@
 			children = (
 				C120F3C01E60A9050025FC38 /* AppReducer.swift */,
 				C120F3C21E60AA0F0025FC38 /* EventsBrowserReducer.swift */,
-				C120F3BE1E60A8390025FC38 /* ToastReducer.swift */,
 				C120F3D01E60CF880025FC38 /* NavigationReducer.swift */,
+				C120F3BE1E60A8390025FC38 /* ToastReducer.swift */,
+				C12A9A611E647C890069C5B2 /* UserProfileReducer.swift */,
 			);
 			name = Reducers;
 			sourceTree = "<group>";
@@ -205,8 +215,9 @@
 			children = (
 				C120F3B51E6093B00025FC38 /* AppState.swift */,
 				C120F3C81E60CB120025FC38 /* EventsBrowserState.swift */,
-				C120F3CA1E60CB2A0025FC38 /* ToastState.swift */,
 				C120F3CC1E60CB3B0025FC38 /* NavigationState.swift */,
+				C120F3CA1E60CB2A0025FC38 /* ToastState.swift */,
+				C12A9A5F1E647BC00069C5B2 /* UserProfileState.swift */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -261,6 +272,7 @@
 				C120F3D41E60E8A10025FC38 /* NavigationStateSpec.swift */,
 				C120F3C51E60B6BC0025FC38 /* ToastStateSpec.swift */,
 				C17056F71E6246200050C15D /* UserModelSpec.swift */,
+				C12A9A651E6482A80069C5B2 /* UserProfileStateSpec.swift */,
 			);
 			path = OctowireTests;
 			sourceTree = "<group>";
@@ -559,7 +571,10 @@
 				C120F3D31E60DCEF0025FC38 /* Routes.swift in Sources */,
 				C120F3CB1E60CB2A0025FC38 /* ToastState.swift in Sources */,
 				C120F3BD1E60985A0025FC38 /* ToastActions.swift in Sources */,
+				C12A9A641E647E3A0069C5B2 /* UserProfileActions.swift in Sources */,
 				C17057001E638B370050C15D /* AppColor.swift in Sources */,
+				C12A9A621E647C890069C5B2 /* UserProfileReducer.swift in Sources */,
+				C12A9A601E647BC00069C5B2 /* UserProfileState.swift in Sources */,
 				C17056F01E61C50B0050C15D /* ToastController.swift in Sources */,
 				C120F3C11E60A9050025FC38 /* AppReducer.swift in Sources */,
 				C120F3D11E60CF880025FC38 /* NavigationReducer.swift in Sources */,
@@ -588,6 +603,7 @@
 				C17056FA1E6248D00050C15D /* EventModelSpec.swift in Sources */,
 				C17056F81E6246200050C15D /* UserModelSpec.swift in Sources */,
 				C120F3C61E60B6BC0025FC38 /* ToastStateSpec.swift in Sources */,
+				C12A9A661E6482A80069C5B2 /* UserProfileStateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

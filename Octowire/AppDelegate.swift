@@ -15,6 +15,7 @@ var mainStore = RecordingMainStore<AppState>(
     reducer: AppReducer(),
     state: nil,
     typeMaps: [
+        userProfileActionTypeMap,
         eventsBrowserActionTypeMap,
         navigationActionTypeMap,
         toastActionTypeMap
