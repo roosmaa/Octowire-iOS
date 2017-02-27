@@ -220,32 +220,61 @@ class EventsViewEventCell: UICollectionViewCell {
                       progressBlock: nil,
                       completionHandler: nil)
         
+        let boldSystemFont = UIFont.boldSystemFont(ofSize: summaryLabel.font.pointSize)
+        
         let eventIcon: UIImage?
-        let summaryText: NSAttributedString
+        let summaryText: [(String, attributes: [String : Any])]
+        
         switch model {
         case let ev as CreateEventModel:
             eventIcon = #imageLiteral(resourceName: "RepositoryIcon")
-            summaryText = NSAttributedString(string: "\(ev.actorUsername ?? "someone") created repository \(ev.repoName ?? "a-repo")")
+            summaryText = [
+                ("\(ev.actorUsername ?? "someone")", attributes: [
+                    NSFontAttributeName: boldSystemFont]),
+                (" created repository ", attributes: [:]),
+                ("\(ev.repoName ?? "a-repo")", attributes: [
+                    NSForegroundColorAttributeName: AppColor.blue])]
             
         case let ev as WatchEventModel:
             eventIcon = #imageLiteral(resourceName: "StarIcon")
-            summaryText = NSAttributedString(string: "\(ev.actorUsername ?? "someone") starred \(ev.repoName ?? "a-repo")")
+            summaryText = [
+                ("\(ev.actorUsername ?? "someone")", attributes: [
+                    NSFontAttributeName: boldSystemFont]),
+                (" starred ", attributes: [:]),
+                ("\(ev.repoName ?? "a-repo")", attributes: [
+                    NSForegroundColorAttributeName: AppColor.blue])]
             
         case let ev as ForkEventModel:
             eventIcon = #imageLiteral(resourceName: "ForkIcon")
-            summaryText = NSAttributedString(string: "\(ev.actorUsername ?? "someone") forked \(ev.repoName ?? "a-repo") to \(ev.actorUsername ?? "someone")/\(ev.forkRepoName ?? "a-repo")")
+            summaryText = [
+                ("\(ev.actorUsername ?? "someone")", attributes: [
+                    NSFontAttributeName: boldSystemFont]),
+                (" forked ", attributes: [:]),
+                ("\(ev.repoName ?? "a-repo")", attributes: [
+                    NSForegroundColorAttributeName: AppColor.blue]),
+                (" to ", attributes: [:]),
+                ("\(ev.actorUsername ?? "someone")/\(ev.forkRepoName ?? "a-repo")", attributes: [
+                    NSForegroundColorAttributeName: AppColor.blue])]
             
         case let ev as PullRequestEventModel:
             eventIcon = #imageLiteral(resourceName: "PullRequestIcon")
-            summaryText = NSAttributedString(string: "\(ev.actorUsername ?? "someone") opened pull request \(ev.repoName ?? "a-repo")#\(ev.pullRequestNumber ?? 0)")
+            summaryText = [
+                ("\(ev.actorUsername ?? "someone")", attributes: [
+                    NSFontAttributeName: boldSystemFont]),
+                (" opened pull request ", attributes: [:]),
+                ("\(ev.repoName ?? "a-repo")#\(ev.pullRequestNumber ?? 0)", attributes: [
+                    NSForegroundColorAttributeName: AppColor.blue])]
             
         default:
             eventIcon = nil
-            summaryText = NSAttributedString(string: "Event #\(model.id)")
+            summaryText = [("Event #\(model.id)", attributes: [:])]
         }
         
         self.iconImage.image = eventIcon
-        self.summaryLabel.attributedText = summaryText
+        self.summaryLabel.attributedText = summaryText.reduce(NSMutableAttributedString()) { s, part in
+            s.append(NSAttributedString(string: part.0, attributes: part.attributes))
+            return s
+        }
     }
 }
 
