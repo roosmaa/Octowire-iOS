@@ -15,16 +15,12 @@ PODS:
   - RMessage (2.1.2):
     - HexColors (~> 4.0)
     - PPTopMostController
-  - RxBlocking (3.2.0):
-    - RxSwift (~> 3.1)
   - RxCocoa (3.2.0):
     - RxSwift (~> 3.1)
   - RxDataSources (1.0.3):
     - RxCocoa (~> 3.0)
     - RxSwift (~> 3.0)
   - RxSwift (3.2.0)
-  - RxTest (3.2.0):
-    - RxSwift (~> 3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
@@ -36,11 +32,9 @@ DEPENDENCIES:
   - ReSwift (~> 3.0)
   - ReSwiftRecorder
   - RMessage
-  - RxBlocking (~> 3.0)
   - RxCocoa (~> 3.0)
   - RxDataSources (~> 1.0)
   - RxSwift (~> 3.0)
-  - RxTest (~> 3.0)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
@@ -54,12 +48,10 @@ SPEC CHECKSUMS:
   ReSwift: f0255f4b4f2dacd12c5d97d34d13fc5dad6d6371
   ReSwiftRecorder: f37a363425ad61c7ddc2172e14ab7799b6b27483
   RMessage: 048425648963c999e4ad2836d8e706b9692af14a
-  RxBlocking: ec8ed471ba77b4fb98a2d60f1f8419b0b46eaa23
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
-  RxTest: 85fdd6f753e8e62635a58d37bbdd3ce7d5abbef3
 
-PODFILE CHECKSUM: 0010bf83944dfd158a9f96b0f245bcf2101f47c3
+PODFILE CHECKSUM: 778c6f0c931d2bfb6b11ede1e646f9b046e81f08
 
 COCOAPODS: 1.2.0

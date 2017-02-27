@@ -16,8 +16,6 @@ target 'Octowire' do
   pod 'ReSwiftRecorder'
 
   def testing_pods
-    pod 'RxBlocking', '~> 3.0'
-    pod 'RxTest',     '~> 3.0'
     pod 'Quick'
     pod 'Nimble'
   end
